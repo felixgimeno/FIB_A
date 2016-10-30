@@ -1,0 +1,47 @@
+Objectius:
+	veure: la representacío d'un document per un conjunt de k-shingles a la secció 3.2 
+	veure: la representació d'un document per una signatura minhash amb t components obtinguda utilitzant t funcions de hash a la seccío 3.3.2. 
+	llibre: http://infolab.stanford.edu/~ullman/mmds/ch3.pdf
+	Us demanem que implementeu algorismes per:
+		->	Obtenir la similitud de Jaccard de dos documents representats per conjunts de k-shingles.
+			Recordeu que el grau de similitud de Jaccard de dos conjunts A i B es defineix com
+				J_sim(A,B)=abs(A intersect B)/abs(A union B)  
+		->	Obtenir una aproximació del grau de similitud de Jaccard a través d'una representació via 
+			signatures minhash basades en t funcions de hash. La mesura de similitud de dos signatures
+			a i b amb t components es defineix com:
+				sim(a,b)=(1/t)*sum_{i=1}^{t} delta(a_i,b_i) 	on delta(a_i,b_i) = 1 iff a_i = b_i else 0
+		->	Implementar un algorisme de Locality-Sensitive Hashing (LSH) basat en signatures minhash
+	
+	L’objectiu  ́es per una part veure experimentalment la dependència entre precisió i temps de còmput en funció
+	dels valors del paràmetres k i t per diferents col·leccions de documents i famílies de funcions de hash i per una altra, 
+	analitzar experimentalment la qualitat de les solucions computades per l'algorisme de LSH.
+Entrega:
+	El nivell de sofisticació i esfoŗc dedicat a la pràctica  ́es opcional i es tindrà en compte a l'hora
+	d'avaluar-la. En la versió més senzilla (suficient per tenir bona nota si està acompanyada d'un
+	bon disseny d'experiments) implementeu programes en C++ per als problemes proposats seguint
+	la versió més simple del capítol 3 en particular l'algorisme de LSH per signatures minhash
+	descrit a la secció 3.4. Versions més sofisticades de la Pràctica inclouran la implementació de
+	algorismes no bàsics o de més d'un algorisme de LSH o de variacions de l'algorisme bàsic.
+	Tingueu en compte que haureu de mesurar el temps dels algorismes. A més, pot ser haureu de
+	fer un seguiment de diversos comptadors que permetin quantificar el tipus i la quantitat de treball
+	que el programa fa i la qualitat de la mesura/solució computada.
+Dades:
+	Aquest document  ́es intencionadament vague. Per tant, a m ́es d’analitzar i experimentar amb
+	diferents funcions de hash i versions d’algorismes, haureu de documentar tant les decisions preses
+	com el disseny d’experiments que els hi donen suport i la selecci ́o de conjunt de dades. Si feu servir
+	un repositori p ́
+	 ublic, cal que proporcioneu l’adre ̧ca del repositori aix ́ı com (si cal) les modificacions
+	i/o simplificacions sobre els conjunts de dades triats.
+	Com a u
+	  ́ nic requisit us demanem que un dels conjunts de dades sigui format per 20 documents
+	que haureu d’obtenir mitjan ̧cant permutacions aleat`ories d’un document de text amb 50 paraules.
+Què cal lliurar:
+	Cal lliurar una carpeta comprimida (.zip) que contingui:
+	• Una breu descripció del qu`e heu implementat, les funcions de hash que heu fet servir, les
+		proves que heu fet i la comparaci ́o dels resultats que heu obtingut. Tamb ́e  ́es interessant que
+		indiqueu idees que heu provat encara que no hagin donat bons resultats. El document en
+		format PDF ha d’incloure les refer`encies adients.
+	• Una carpeta amb totes les fonts necess`aries per compilar i executar la vostra pr`actica. S’han
+		d’incloure les instruccions per a la compilaci ́o i execuci ́o, aix ́ı com els conjunts de dades
+		utilitzats o els programes per generar-los aleat`oriament si cal.
+		
