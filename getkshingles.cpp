@@ -93,6 +93,17 @@ signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, c
 	return ret;
 }
 
+/*
+ * jaccard similarity given a signature matrix and the indexes of two k_shingles
+ */
+double jaccard_similarity(const size_t index1, const size_t index2, const signature_matrix& sm){
+	size_t acc = 0; 
+	for (size_t j = 0; j < sm.size(); j += 1){
+		acc += int(sm.at(j).at(index1) == sm.at(j).at(index2));
+	}
+	return acc/double(sm.size());
+}
+
 void print(const signature_matrix& sm){
 	cout << "printing signature matrix:\n";
 	for (auto& r : sm){
