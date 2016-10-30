@@ -28,18 +28,18 @@ Entrega:
 Dades:
 	Aquest document és intencionadament vague. Per tant, a més d'analitzar i experimentar amb
 	diferents funcions de hash i versions d'algorismes, haureu de documentar tant les decisions preses
-	com el disseny d’experiments que els hi donen suport i la selecci ́o de conjunt de dades. Si feu servir
+	com el disseny d’experiments que els hi donen suport i la selecció de conjunt de dades. Si feu servir
 	un repositori públic, cal que proporcioneu l'adreeça del repositori així com (si cal) les modificacions
 	i/o simplificacions sobre els conjunts de dades triats.
 	Com a únic requisit us demanem que un dels conjunts de dades sigui format per 20 documents
 	que haureu d'obtenir mitjançant permutacions aleatòries d'un document de text amb 50 paraules.
 Què cal lliurar:
 	Cal lliurar una carpeta comprimida (.zip) que contingui:
-		->	Una breu descripció del qu`e heu implementat, les funcions de hash que heu fet servir, les
-			proves que heu fet i la comparaci ́o dels resultats que heu obtingut. També ́es interessant que
+		->	Una breu descripció del què heu implementat, les funcions de hash que heu fet servir, les
+			proves que heu fet i la comparació dels resultats que heu obtingut. També ́es interessant que
 			indiqueu idees que heu provat encara que no hagin donat bons resultats. El document en
 			format PDF ha d'incloure les referències adients.
-		->	Una carpeta amb totes les fonts necess`aries per compilar i executar la vostra pràctica. S'han
+		->	Una carpeta amb totes les fonts necessàries per compilar i executar la vostra pràctica. S'han
 			d'incloure les instruccions per a la compilació i execució, així com els conjunts de dades
 			utilitzats o els programes per generar-los aleatòriament si cal.
 			
