@@ -77,9 +77,10 @@ row_to_string get_rows(const collection_of_k_shingles& cks){
 signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, const vector_of_hash_functions& vf){
 	signature_matrix&& ret = signature_matrix (vf.size(), vector<size_t> (cks.size(), numeric_limits<size_t>::max()));
 	row_to_string&& rows = get_rows(cks);
+	const size_t number_of_rows = rows.size(); 
 	for (const auto& kv : rows){
 		vector<size_t> vfr = vector<size_t> (vf.size(), kv.first);
-		transform(vfr.begin(), vfr.end(), vf.begin(), vfr.begin(), [](size_t row_number, function<size_t (size_t)> f){return f(row_number);});
+		transform(vfr.begin(), vfr.end(), vf.begin(), vfr.begin(), [number_of_rows](size_t row_number, function<size_t (size_t)> f){return f(row_number)%number_of_rows;}); 
 		for (size_t i = 0; i < cks.size(); i += 1){
 			const bool column_has_zero_in_this_row = cks.at(i).find(kv.second) ==  cks.at(i).end();
 			if (not column_has_zero_in_this_row){
