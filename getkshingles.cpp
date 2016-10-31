@@ -3,6 +3,7 @@
 #include <iostream>
 #include <limits>
 #include <string>
+#include <random>
 #include <vector>
 #include <set>
 #include <map>
@@ -113,6 +114,16 @@ void print(const signature_matrix& sm){
 		cout << "\n";
 	}
 	cout << "end of signature matrix\n";
+}
+
+/*
+ * https://en.wikipedia.org/wiki/Universal_hashing#Hashing_integers
+ * p should be prime >= m
+ */
+hash_function get_hash_function(size_t a, size_t c, size_t p){
+	return [a,c,p](size_t x) -> size_t {
+		return (a*x+c)%p;
+	};
 }
 
 int main(void){
