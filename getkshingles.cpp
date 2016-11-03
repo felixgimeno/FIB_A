@@ -12,9 +12,9 @@ using namespace std;
 typedef set<string> k_shingles;
 typedef vector<k_shingles> collection_of_k_shingles;
 typedef map<size_t, string> row_to_string;
-typedef vector<vector<size_t>> signature_matrix;
-typedef function<size_t (size_t)> hash_function;
-typedef vector< hash_function> vector_of_hash_functions;
+typedef vector<vector<size_t> > signature_matrix;
+typedef function<size_t (size_t) > hash_function;
+typedef vector< hash_function > vector_of_hash_functions;
 
 /*
  *  str shouldn't have newlines or tabs or multiple consecutive spaces 
