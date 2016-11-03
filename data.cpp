@@ -12,7 +12,7 @@ using namespace std;
 
 
 int main() {
-	
+	srand(time(NULL));
 	
 	vector<string> vwords;
 	
