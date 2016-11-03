@@ -7,9 +7,15 @@
 #include <vector>
 #include <set>
 #include <map>
+#include <string>
+#include <sstream> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <fstream>
 using namespace std;
 
-typedef set<string> k_shingles;
+typedef set<string> k_shingles; //set de ksingles
 typedef vector<k_shingles> collection_of_k_shingles;
 typedef map<size_t, string> row_to_string;
 typedef vector<vector<size_t> > signature_matrix;
@@ -127,19 +133,65 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
 }
 
 int main(void){
-	const size_t k = 9;
+	const size_t k = 9;//no tocar
 	const string str1 = "minhashing is the best";
 	const string str2 = "minhashing is not the best";
+	const string str3 = "minhashing is not the best";
+	collection_of_k_shingles cks;
+	for (int i = 1; i <= 20; ++i) {
+		
+		string str = "";
+		vector<string> vwords;
+		ifstream file;
+		
+		stringstream stream; 
+        string palabra; 
+	    stream << i; 
+        palabra = stream.str();
+		palabra +=".txt";
+		
+		
+		file.open(palabra.c_str());
+		if (file.is_open()) {
+		string s;
+		//leemos del vector.
+		while (!file.eof()) {
+			file >> s;
+			vwords.push_back(s);
+			}
+		}
+		file.close();
+		for (int j = 0; j < int(vwords.size()); ++j) {
+			str += vwords[j];
+			str += " ";
+			}
+		cout << "el string of the file  " << i << " is " << endl;
+		cout  << str << endl;
+		k_shingles A = get_k_shingles_from_string(k, str);
+		print(A);
+		cks.push_back(A);
+			
+	}
+	//meter todo el texto en un string coger los 20 con bucle
 	const k_shingles A = get_k_shingles_from_string(k, str1);
 	const k_shingles B = get_k_shingles_from_string(k, str2);
-	const collection_of_k_shingles cks = {A,B};
-	const vector_of_hash_functions vh = {[](size_t a){return a;}};
-	const signature_matrix sm = compute_signature_matrix(cks, vh);
-	print(A);
+	const k_shingles C = get_k_shingles_from_string(k, str3);
+	//pasarlo a ksingle de los 20 y hacer push back 
+	
+	
+	//hacer esto pero con u bucle hasta 20 y haciedo push a cks
+	
+	
+	const vector_of_hash_functions vh = {[](size_t a){return a;}}; //no tocar
+	const signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
+	print(A); //debuggar prints
 	print(B);
 	print(sm);
-	const double j_sim = jaccard_similarity(A, B);
+	const double j_sim = jaccard_similarity(A, B); //  for(i){for(j){if i < j then jaccard_similarity(cks.at(i),cks.at(j))}}
+	
 	cout << j_sim << endl;
-	return 0;
+	const double js_sm = jaccard_similarity(0,1, sm);	//  for(i){for(j){if i < j then jaccard_similarity(i,j,sm)}}
+	cout << js_sm << endl;
+	return 0;//no tocar
 	
 } 
