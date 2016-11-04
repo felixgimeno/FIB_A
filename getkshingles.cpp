@@ -133,11 +133,10 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
 }
 
 int main(void){
-	const size_t k = 9;//no tocar
-	const string str1 = "minhashing is the best";
-	const string str2 = "minhashing is not the best";
-	const string str3 = "minhashing is not the best";
+	const size_t k = 9; //no tocar
+
 	collection_of_k_shingles cks;
+	//vamos leyendo los  20 documentos
 	for (int i = 1; i <= 20; ++i) {
 		
 		string str = "";
@@ -161,37 +160,46 @@ int main(void){
 			}
 		}
 		file.close();
+		//pasamos el word iessimo a un solo string con sus espacios.
 		for (int j = 0; j < int(vwords.size()); ++j) {
 			str += vwords[j];
-			str += " ";
+			str += " "; //ojo con el ultimo espacio de la ultima word.
 			}
+		//print debugger
 		cout << "el string of the file  " << i << " is " << endl;
 		cout  << str << endl;
+		
+		//calcuamos el k-shingles del string "texto"
 		k_shingles A = get_k_shingles_from_string(k, str);
 		print(A);
+		//lo metemos en la coleccion
 		cks.push_back(A);
-			
-	}
-	//meter todo el texto en un string coger los 20 con bucle
-	const k_shingles A = get_k_shingles_from_string(k, str1);
-	const k_shingles B = get_k_shingles_from_string(k, str2);
-	const k_shingles C = get_k_shingles_from_string(k, str3);
-	//pasarlo a ksingle de los 20 y hacer push back 
+		}
+
 	
-	
-	//hacer esto pero con u bucle hasta 20 y haciedo push a cks
+
 	
 	
 	const vector_of_hash_functions vh = {[](size_t a){return a;}}; //no tocar
 	const signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
-	print(A); //debuggar prints
-	print(B);
-	print(sm);
-	const double j_sim = jaccard_similarity(A, B); //  for(i){for(j){if i < j then jaccard_similarity(cks.at(i),cks.at(j))}}
 	
-	cout << j_sim << endl;
-	const double js_sm = jaccard_similarity(0,1, sm);	//  for(i){for(j){if i < j then jaccard_similarity(i,j,sm)}}
-	cout << js_sm << endl;
-	return 0;//no tocar
 	
-} 
+
+	for (int i = 0; i < int(cks.size()); ++i) {
+		for (int j = i+1;j < int(cks.size()); ++j) {
+			cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
+			}
+		cout << endl;
+		}
+   cout << endl;
+   cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
+   cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
+  
+  for (int i = 0; i < int(cks.size()); ++i) {
+		for (int j = i + 1; j < int(cks.size()); ++j) {
+			cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
+			}
+		cout << endl;
+	  }
+	return 0;
+  } 
