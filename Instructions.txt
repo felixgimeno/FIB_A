@@ -1,0 +1,14 @@
+Informacion: 50words.txt representa la base de datos de las 50 palabras.
+Se puede cambiar en cualquier momento para ir probando
+
+PASO1: Se usa data.cpp para generar los 20 archivos con las 20 permutaciones random.
+PARA COMPILAR EL data.cpp CON C++11
+
+g++ -Wall -Wextra -std=c++11  -o data data.cpp
+
+Se ejecuta y el mismo genera los 20 txt's, 50words.txt ha estar presenta en la misma carpeta. 
+
+PASO2: getkshingles CON C++11
+g++ -Wall -Wextra -std=c++11  -o getkshingles getkshingles.cpp
+
+Se computa los getkshingles. 
