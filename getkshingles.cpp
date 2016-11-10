@@ -13,6 +13,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <fstream>
+
+#include <iomanip>
+#include <chrono>
+#include <ctime>
+#include <thread>
 using namespace std;
 
 typedef set<string> k_shingles; //set de ksingles
@@ -156,6 +161,7 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
  * locality sensitive hashing
  * returns a set of all candidate pairs of similar columns
  */
+ /*
 set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf){
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	for (size_t i = 0; i < vf.size(); i += 1){
@@ -168,8 +174,11 @@ set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_
 	//recorremos coincidencias y ponemos en un set las parejas que tengan más de ? coincidencias		
 	return set<pair<size_t, size_t> > ();
 }
-
+*/
 int main(void){
+	const clock_t begin_time = clock();
+
+
 	const size_t k = 9; //no tocar
 
 	collection_of_k_shingles cks;
@@ -238,5 +247,8 @@ int main(void){
 			}
 		cout << endl;
 	  }
+
+    cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
 	return 0;
+	
   } 
