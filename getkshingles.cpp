@@ -20,7 +20,9 @@ typedef vector<k_shingles> collection_of_k_shingles;
 typedef map<size_t, string> row_to_string;
 typedef vector<vector<size_t> > signature_matrix;
 typedef function<size_t (size_t) > hash_function;
+typedef function<size_t (vector<size_t>) > hash_function_for_vectors;
 typedef vector< hash_function > vector_of_hash_functions;
+typedef vector< hash_function_for_vectors > vector_of_hash_function_for_vectors;
 
 /*
  *  given k returns set of all substrings of length k that appear in str 
@@ -113,6 +115,7 @@ signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, c
 	return ret;
 }
 
+
 /*
  * jaccard similarity given a signature matrix and the indexes of two k_shingles
  */
@@ -147,6 +150,23 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
 	return [a,c,p](size_t x) -> size_t {
 		return (a*x+c)%p;
 	};
+}
+
+/*
+ * locality sensitive hashing
+ * returns a set of all candidate pairs of similar columns
+ */
+set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf){
+	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
+	for (size_t i = 0; i < vf.size(); i += 1){
+		//para cada columna
+			//cojemos las r filas de la banda i de esa columna de sm
+			//la hasheamos con vf.at(i)
+			//la añadimos a un "bucket"
+		//miramos los "buckets" y se coinciden añadimos 1 a "coincidencias" 	
+	}
+	//recorremos coincidencias y ponemos en un set las parejas que tengan más de ? coincidencias		
+	return set<pair<size_t, size_t> > ();
 }
 
 int main(void){
