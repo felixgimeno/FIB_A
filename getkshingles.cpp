@@ -92,6 +92,7 @@ row_to_string get_rows(const collection_of_k_shingles& cks){
 }
 /*
  * section 3.3.5 of the book
+ * computes a signature matrix from which the jaccard similarity of two set can be approximated
  */
 signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, const vector_of_hash_functions& vf){
 	signature_matrix&& ret = signature_matrix (vf.size(), vector<size_t> (cks.size(), numeric_limits<size_t>::max()));
@@ -123,6 +124,9 @@ double jaccard_similarity(const size_t index1, const size_t index2, const signat
 	return acc/double(sm.size());
 }
 
+/*
+ * (for debugging) print signature matrix
+ */
 void print(const signature_matrix& sm){
 	cout << "printing signature matrix:\n";
 	for (auto& r : sm){
@@ -135,6 +139,7 @@ void print(const signature_matrix& sm){
 }
 
 /*
+ * this is a universal hashing framework from which we can obtain hash functions
  * https://en.wikipedia.org/wiki/Universal_hashing#Hashing_integers
  * p should be prime >= m
  */
