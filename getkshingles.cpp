@@ -23,7 +23,8 @@ typedef function<size_t (size_t) > hash_function;
 typedef vector< hash_function > vector_of_hash_functions;
 
 /*
- *  str shouldn't have newlines or tabs or multiple consecutive spaces 
+ *  given k returns set of all substrings of length k that appear in str 
+ *  str shouldn't have newlines or tabs or multiple consecutive spaces
  */ 
 k_shingles get_k_shingles_from_string(const size_t& k, const string& str){
 	k_shingles ret = k_shingles ();
@@ -35,6 +36,10 @@ k_shingles get_k_shingles_from_string(const size_t& k, const string& str){
 	return ret;
 }
 
+/*
+ * computes the jaccard similarity from two sets
+ * jaccard similarity of two sets is the number of elements in both divided by the number of elements in one or the other
+ */
 double jaccard_similarity(const k_shingles& A, const k_shingles& B){
 	k_shingles C = B;
 	uint_fast64_t count_intersection = 0;
@@ -61,8 +66,15 @@ double jaccard_similarity(const k_shingles& A, const k_shingles& B){
 	return double(count_intersection)/double(count_union);	
 }
 
+/*
+ * (for debugging) prints the set of k-shingles
+ */
 void print(const k_shingles& A){for (const auto& v : A){cout << "\"" << v << "\", ";} cout << endl;}
 
+/*
+ * each row in the characteristic matrix is one of the k_shingles cointained in any of the sets in cks
+ * this function returns a map of row number to k-shingle addigned to that row
+ */
 row_to_string get_rows(const collection_of_k_shingles& cks){
 	row_to_string ret = row_to_string ();
 	k_shingles rows = k_shingles ();
