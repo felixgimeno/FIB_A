@@ -156,6 +156,16 @@ hash_function get_hash_function(size_t a, size_t c /* , size_t p */){
 	};
 }
 
+hash_function_for_vectors get_hash_function_for_vectors(size_t a , size_t c /* , size_t p */){
+	return [a,c /* ,p */](vector<size_t> x) -> size_t {
+		size_t ret = 0;
+		for (size_t k : x){
+			ret = ( ret * a + c + k ) /* %p */ ;  
+			}
+		return ret;
+	};	
+}
+
 /*
  * locality sensitive hashing
  * returns a set of all candidate pairs of similar columns
@@ -248,9 +258,9 @@ int main(void){
 		vh.push_back(get_hash_function(rand(),rand()));
 	}
 	const size_t number_of_vector_of_hash_function_for_vectors = 10;
-	const vector_of_hash_function_for_vectors vf = vector_of_hash_function_for_vectors ();
+	vector_of_hash_function_for_vectors vf = vector_of_hash_function_for_vectors ();
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
-		//vf.push_back(get_hash_function(rand(),rand()));
+		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
 		
     for (size_t k = 1; k < 5; ++k){
