@@ -253,13 +253,13 @@ int main(void){
 		}
 	
 	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
-	const size_t number_of_hash_functions = 10;
+	const size_t number_of_hash_functions = 100;
 	vector_of_hash_functions vh = {[](size_t a){return a;}};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
 		vh.push_back(get_hash_function(rand(),rand()));
 	}
-	const size_t number_of_vector_of_hash_function_for_vectors = 10;
+	const size_t number_of_vector_of_hash_function_for_vectors = 100;
 	vector_of_hash_function_for_vectors vf = vector_of_hash_function_for_vectors ();
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
@@ -298,12 +298,16 @@ int main(void){
 				//Mirate este trozo de codigo.
 				//solo quiero obtener el set de lsh y imprimrlo , pero hace nada
 				//compila y tal ejecuta , pero el lsh no lo esta haciendo
-				cout << "lsh del main" << endl;
+				cout << "Candidatos según LSH constantes k " << k << " r " << r << " t " << t ; // << endl;
 				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
 				for (auto& k : pairconcidence){ 
-					cout << k.first << " " << k.second << endl; 
-					cout << "estoy calculando la del lsh" << endl;
-					cout << "jaccard " << jaccard_similarity(k.first, k.second, sm) << endl;
+					cout << " documentos " << k.first << " " << k.second; // << endl; 
+					//cout << "estoy calculando la del lsh" << endl;
+					const float_t js_sm = jaccard_similarity(k.first, k.second, sm);
+					const float_t js = jaccard_similarity(cks.at(k.first), cks.at(k.second));
+					cout << " jaccard sm " <<  js_sm;// << endl;
+					cout << " jaccard directo " << js;
+					cout << " error relativo " << abs(js-js_sm)/js;
 					cout << endl;
 					
 					}
