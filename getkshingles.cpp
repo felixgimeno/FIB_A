@@ -161,20 +161,27 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
  * locality sensitive hashing
  * returns a set of all candidate pairs of similar columns
  */
- /*
-set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf){
+ 
+set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, size_t t, size_t r){
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	for (size_t i = 0; i < vf.size(); i += 1){
-		//para cada columna
-			//cojemos las r filas de la banda i de esa columna de sm
-			//la hasheamos con vf.at(i)
-			//la añadimos a un "bucket"
-		//miramos los "buckets" y se coinciden añadimos 1 a "coincidencias" 	
+		map<size_t, set<size_t> > bucket = map<size_t, set<size_t> > ();
+		for(size_t j = 0; j < sm.at(0).size(); j += 1){
+			//i numero banda, j numero columna, vf.size() es b, t es el threshold
+			vector<size_t> input_hash_function = vector<size_t> ();
+			for(size_t q = 0; q < r; q += 1){
+				input_hash_function.push_back(sm.at(i*r+q).at(j));
+			}
+			size_t output_hash_function = vf.at(i)(input_hash_function);
+			bucket[output_hash_function].insert(j);
+		} 
+		//miramos los "buckets" y se coinciden añadimos 1 a "coincidencias"
+		
 	}
 	//recorremos coincidencias y ponemos en un set las parejas que tengan más de ? coincidencias		
 	return set<pair<size_t, size_t> > ();
 }
-*/
+
 int main(void){
 	const clock_t begin_time = clock();
 
