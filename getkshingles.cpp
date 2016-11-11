@@ -164,7 +164,9 @@ hash_function get_hash_function(size_t a, size_t c, size_t p){
  
 set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, size_t t, size_t r){
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
-	for (size_t i = 0; i < vf.size(); i += 1){
+	size_t nbands = int(ceil(sm.size()/r));
+	size_t ivf = 0; //índice sobre el que itera vf
+	for (size_t i = 0; i < nbands; i += 1){
 		map<size_t, set<size_t> > bucket = map<size_t, set<size_t> > ();
 		for(size_t j = 0; j < sm.at(0).size(); j += 1){
 			//i numero banda, j numero columna, vf.size() es b, t es el threshold
@@ -174,12 +176,29 @@ set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_
 			}
 			size_t output_hash_function = vf.at(i)(input_hash_function);
 			bucket[output_hash_function].insert(j);
+			if(ivf++ >= vf.size()) ivf = 0;
 		} 
-		//miramos los "buckets" y se coinciden añadimos 1 a "coincidencias"
-		
+		//miramos los "buckets" y si coinciden añadimos 1 a "coincidencias"
+		for (auto itmap = bucket.begin(); itmap != bucket.end(); ++itmap){ //para cada set del bucket
+			for (auto itseta = (itmap->second).begin(); itseta != (itmap->second).end(); ++itseta){ //fijamos el primer elemento del set
+				for (auto itsetb = itseta; itsetb != (itmap->second).end(); ++itsetb){ //recorremos los demás elementos a partir del fijo
+					if(*itseta < *itsetb)
+						coincidencias[pair<size_t, size_t> (*itseta, *itsetb)]++;
+					else
+						coincidencias[pair<size_t, size_t> (*itsetb, *itseta)]++;
+				}
+			}
+		}
 	}
 	//recorremos coincidencias y ponemos en un set las parejas que tengan más de ? coincidencias		
-	return set<pair<size_t, size_t> > ();
+	set<pair<size_t, size_t> > pair_candidates = set<pair<size_t, size_t> > ();
+	for(auto itcoin = coincidencias.begin(); itcoin != coincidencias.end(); ++itcoin){
+		//determine whether the fraction of components in which they agree is at least t
+		if((itcoin->second) / nbands >= t){
+			pair_candidates.insert(pair<size_t,size_t> (itcoin->first));
+		}
+	}
+	return pair_candidates;
 }
 
 int main(void){
