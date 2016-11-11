@@ -183,9 +183,9 @@ set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_
 			for(size_t q = 0; q < r; q += 1){
 				input_hash_function.push_back(sm.at(i*r+q).at(j));
 			}
-			size_t output_hash_function = vf.at(i)(input_hash_function);
+			size_t output_hash_function = vf.at(ivf)(input_hash_function);
 			bucket[output_hash_function].insert(j);
-			if(ivf++ >= vf.size()) ivf = 0;
+			if(++ivf >= vf.size()) ivf = 0;
 		} 
 		//miramos los "buckets" y si coinciden añadimos 1 a "coincidencias"
 		for (auto itmap = bucket.begin(); itmap != bucket.end(); ++itmap){ //para cada set del bucket
