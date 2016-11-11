@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <fstream>
-
 #include <iomanip>
 #include <chrono>
 #include <ctime>
@@ -151,9 +150,9 @@ void print(const signature_matrix& sm){
  * https://en.wikipedia.org/wiki/Universal_hashing#Hashing_integers
  * p should be prime >= m
  */
-hash_function get_hash_function(size_t a, size_t c, size_t p){
-	return [a,c,p](size_t x) -> size_t {
-		return (a*x+c)%p;
+hash_function get_hash_function(size_t a, size_t c /* , size_t p */){
+	return [a,c /* ,p */](size_t x) -> size_t {
+		return (a*x+c)/* %p */;
 	};
 }
 
@@ -240,7 +239,20 @@ int main(void){
 		textos.push_back(str);
 	
 		}
-		const vector_of_hash_functions vh = {[](size_t a){return a;}}; //no tocar
+	
+	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
+	const size_t number_of_hash_functions = 10;
+	vector_of_hash_functions vh = {[](size_t a){return a;}};
+	srand(time(0));
+	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
+		vh.push_back(get_hash_function(rand(),rand()));
+	}
+	const size_t number_of_vector_of_hash_function_for_vectors = 10;
+	const vector_of_hash_function_for_vectors vf = vector_of_hash_function_for_vectors ();
+	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
+		//vf.push_back(get_hash_function(rand(),rand()));
+	}
+		
     for (size_t k = 1; k < 5; ++k){
 		for (size_t t = 1; t < 5; ++t) {
 			for (size_t r = 1; r < 5; ++r) {
