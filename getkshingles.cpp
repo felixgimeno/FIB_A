@@ -171,7 +171,7 @@ hash_function_for_vectors get_hash_function_for_vectors(size_t a , size_t c /* ,
  * returns a set of all candidate pairs of similar columns
  */
  
-set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, size_t t, size_t r){
+set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, float t, size_t r){
 	
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	size_t nbands = int(ceil(sm.size()/r));
@@ -192,10 +192,13 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 		for (auto itmap = bucket.begin(); itmap != bucket.end(); ++itmap){ //para cada set del bucket
 			for (auto itseta = (itmap->second).begin(); itseta != (itmap->second).end(); ++itseta){ //fijamos el primer elemento del set
 				for (auto itsetb = itseta; itsetb != (itmap->second).end(); ++itsetb){ //recorremos los demás elementos a partir del fijo
-					if(*itseta < *itsetb)
+					if(*itseta < *itsetb){
 						coincidencias[pair<size_t, size_t> (*itseta, *itsetb)]++;
-					else
+					}
+					if(*itseta == *itsetb){}
+					if(*itseta > *itsetb){
 						coincidencias[pair<size_t, size_t> (*itsetb, *itseta)]++;
+					}
 				}
 			}
 		}
@@ -204,7 +207,7 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 	set<pair<size_t, size_t> > pair_candidates = set<pair<size_t, size_t> > ();
 	for(auto itcoin = coincidencias.begin(); itcoin != coincidencias.end(); ++itcoin){
 		//determine whether the fraction of components in which they agree is at least t
-		if((itcoin->second) / nbands >= t){
+		if((itcoin->second) >= t * nbands){
 			pair_candidates.insert(pair<size_t,size_t> (itcoin->first));
 		}
 	}
@@ -263,9 +266,10 @@ int main(void){
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
-		
+	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 /*,0.6,0.7,0.8,0.9,1*/};	
     for (size_t k = 1; k < 3; ++k){
-		for (size_t t = 1; t < 3; ++t) {
+		
+		for (float t : t_values) {
 			for (size_t r = 1; r < 3; ++r) {
 				collection_of_k_shingles cks;
 				
@@ -298,7 +302,8 @@ int main(void){
 				//compila y tal ejecuta , pero el lsh no lo esta haciendo
 				cout << "lsh del main" << endl;
 				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
-				for (auto& k : pairconcidence){ cout << k.first << " " << k.second << endl; 
+				for (auto& k : pairconcidence){ 
+					cout << k.first << " " << k.second << endl; 
 					cout << "estoy calculando la del lsh" << endl;
 					cout << "jaccard " << jaccard_similarity(k.first, k.second, sm) << endl;
 					cout << endl;
