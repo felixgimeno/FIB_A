@@ -171,7 +171,8 @@ hash_function_for_vectors get_hash_function_for_vectors(size_t a , size_t c /* ,
  * returns a set of all candidate pairs of similar columns
  */
  
-set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, size_t t, size_t r){
+set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, size_t t, size_t r){
+	
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	size_t nbands = int(ceil(sm.size()/r));
 	size_t ivf = 0; //índice sobre el que itera vf
@@ -263,9 +264,9 @@ int main(void){
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
 		
-    for (size_t k = 1; k < 5; ++k){
-		for (size_t t = 1; t < 5; ++t) {
-			for (size_t r = 1; r < 5; ++r) {
+    for (size_t k = 1; k < 3; ++k){
+		for (size_t t = 1; t < 3; ++t) {
+			for (size_t r = 1; r < 3; ++r) {
 				collection_of_k_shingles cks;
 				
 				for (int i = 0; i < 20; ++i){
@@ -275,6 +276,7 @@ int main(void){
 					cks.push_back(A);
 				}
 				signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
+				
 				for (int i = 0; i < int(cks.size()); ++i) {
 					for (int j = i+1;j < int(cks.size()); ++j) {
 						cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
@@ -291,6 +293,18 @@ int main(void){
 						}
 					cout << endl;
 				}
+				//Mirate este trozo de codigo.
+				//solo quiero obtener el set de lsh y imprimrlo , pero hace nada
+				//compila y tal ejecuta , pero el lsh no lo esta haciendo
+				cout << "lsh del main" << endl;
+				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
+				for (auto& k : pairconcidence){ cout << k.first << " " << k.second << endl; 
+					cout << "estoy calculando la del lsh" << endl;
+					cout << "jaccard " << jaccard_similarity(k.first, k.second, sm) << endl;
+					cout << endl;
+					
+					}
+		
 				
 			  }
 		   }
