@@ -175,7 +175,6 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 	
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	size_t nbands = int(ceil(sm.size()/r));
-	size_t ivf = 0; //índice sobre el que itera vf
 	for (size_t i = 0; i < nbands; i += 1){
 		map<size_t, set<size_t> > bucket = map<size_t, set<size_t> > ();
 		for(size_t j = 0; j < sm.at(0).size(); j += 1){
@@ -184,9 +183,8 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 			for(size_t q = 0; q < r; q += 1){
 				input_hash_function.push_back(sm.at(i*r+q).at(j));
 			}
-			size_t output_hash_function = vf.at(ivf)(input_hash_function);
+			size_t output_hash_function = vf.at(i % vf.size())(input_hash_function);
 			bucket[output_hash_function].insert(j);
-			if(++ivf >= vf.size()) ivf = 0;
 		} 
 		//miramos los "buckets" y si coinciden añadimos 1 a "coincidencias"
 		for (auto itmap = bucket.begin(); itmap != bucket.end(); ++itmap){ //para cada set del bucket
@@ -205,10 +203,10 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 	}
 	//recorremos coincidencias y ponemos en un set las parejas que tengan más de ? coincidencias		
 	set<pair<size_t, size_t> > pair_candidates = set<pair<size_t, size_t> > ();
-	for(auto itcoin = coincidencias.begin(); itcoin != coincidencias.end(); ++itcoin){
+	for(auto it: coincidencias){
 		//determine whether the fraction of components in which they agree is at least t
-		if((itcoin->second) >= t * nbands){
-			pair_candidates.insert(pair<size_t,size_t> (itcoin->first));
+		if(it.second >= t * nbands){
+			pair_candidates.insert(it.first);
 		}
 	}
 	return pair_candidates;
@@ -266,7 +264,7 @@ int main(void){
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
-	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 /*,0.6,0.7,0.8,0.9,1*/};	
+	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1};	
     for (size_t k = 1; k < 3; ++k){
 		
 		for (float t : t_values) {
@@ -275,7 +273,7 @@ int main(void){
 				
 				for (int i = 0; i < 20; ++i){
 					k_shingles A = get_k_shingles_from_string(k, textos[i]);
-					print(A);
+					//print(A);
 					//lo metemos en la coleccion
 					cks.push_back(A);
 				}
@@ -283,19 +281,19 @@ int main(void){
 				
 				for (int i = 0; i < int(cks.size()); ++i) {
 					for (int j = i+1;j < int(cks.size()); ++j) {
-						cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
+						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
 						}
-					cout << endl;
+					//cout << endl;
 				}
-				cout << endl;
-				cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
-				cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
+				//cout << endl;
+				//cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
+				//cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
 				
 				for (int i = 0; i < int(cks.size()); ++i) {
 					for (int j = i + 1; j < int(cks.size()); ++j) {
-						cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
+						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
 						}
-					cout << endl;
+					//cout << endl;
 				}
 				//Mirate este trozo de codigo.
 				//solo quiero obtener el set de lsh y imprimrlo , pero hace nada
