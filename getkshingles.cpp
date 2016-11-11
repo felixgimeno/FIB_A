@@ -124,7 +124,7 @@ signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, c
 /*
  * jaccard similarity given a signature matrix and the indexes of two k_shingles
  */
-double jaccard_similarity(const size_t index1, const size_t index2, const signature_matrix& sm){
+double jaccard_similarity(const size_t index1, const size_t index2, signature_matrix& sm){
 	size_t acc = 0; 
 	for (size_t j = 0; j < sm.size(); j += 1){
 		acc += int(sm.at(j).at(index1) == sm.at(j).at(index2));
@@ -184,12 +184,9 @@ set<pair<size_t, size_t> > lsh(const signature_matrix& sm, const vector_of_hash_
 
 int main(void){
 	const clock_t begin_time = clock();
-
-
-	const size_t k = 9; //no tocar
-
-	collection_of_k_shingles cks;
-	//vamos leyendo los  20 documentos
+    
+    vector<string> textos;
+    //vamos leyendo los  20 documentos y lo vamos metiendo en el documento
 	for (int i = 1; i <= 20; ++i) {
 		
 		string str = "";
@@ -221,40 +218,43 @@ int main(void){
 		//print debugger
 		cout << "el string of the file  " << i << " is " << endl;
 		cout  << str << endl;
-		
-		//calcuamos el k-shingles del string "texto"
-		k_shingles A = get_k_shingles_from_string(k, str);
-		print(A);
-		//lo metemos en la coleccion
-		cks.push_back(A);
+		textos.push_back(str);
+	
 		}
-
-	
-
-	
-	
-	const vector_of_hash_functions vh = {[](size_t a){return a;}}; //no tocar
-	const signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
-	
-	
-
-	for (int i = 0; i < int(cks.size()); ++i) {
-		for (int j = i+1;j < int(cks.size()); ++j) {
-			cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
-			}
-		cout << endl;
+		const vector_of_hash_functions vh = {[](size_t a){return a;}}; //no tocar
+    for (size_t k = 1; k < 5; ++k){
+		for (size_t t = 1; t < 5; ++t) {
+			for (size_t r = 1; r < 5; ++r) {
+				collection_of_k_shingles cks;
+				
+				for (int i = 0; i < 20; ++i){
+					k_shingles A = get_k_shingles_from_string(k, textos[i]);
+					print(A);
+					//lo metemos en la coleccion
+					cks.push_back(A);
+				}
+				signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
+				for (int i = 0; i < int(cks.size()); ++i) {
+					for (int j = i+1;j < int(cks.size()); ++j) {
+						cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
+						}
+					cout << endl;
+				}
+				cout << endl;
+				cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
+				cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
+				
+				for (int i = 0; i < int(cks.size()); ++i) {
+					for (int j = i + 1; j < int(cks.size()); ++j) {
+						cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
+						}
+					cout << endl;
+				}
+				
+			  }
+		   }
 		}
-   cout << endl;
-   cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
-   cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
-  
-  for (int i = 0; i < int(cks.size()); ++i) {
-		for (int j = i + 1; j < int(cks.size()); ++j) {
-			cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
-			}
-		cout << endl;
-	  }
-
+	
     cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
 	return 0;
 	
