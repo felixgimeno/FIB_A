@@ -299,12 +299,12 @@ vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(cons
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
 	return vf;	
-;
+}
 
 
-int main(void){
-	
-    //Reading Documents
+
+int main(void) {
+	//Reading Documents
      reading_documents();
 	
 	
@@ -343,7 +343,7 @@ int main(void){
 			  }
 		   }
 		}
-	}
+	 }
     //cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
 	return 0;
 } 
