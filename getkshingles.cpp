@@ -28,6 +28,13 @@ typedef function<size_t (vector<size_t>) > hash_function_for_vectors;
 typedef vector< hash_function > vector_of_hash_functions;
 typedef vector< hash_function_for_vectors > vector_of_hash_function_for_vectors;
 
+// GLOBAL VARS
+const size_t number_of_hash_functions = 100; 
+const size_t number_of_vector_of_hash_function_for_vectors = 100;  
+const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1}; // Trashold values
+vector<string> textos;
+
+
 /*
  *  given k returns set of all substrings of length k that appear in str 
  *  str shouldn't have newlines or tabs or multiple consecutive spaces
@@ -237,6 +244,10 @@ double test(const collection_of_k_shingles& cks, const signature_matrix& sm){
 	return sqrt(ret/count);
 }
 
+
+
+
+
 string get_text_file(string filename){
 	string str = "";
 	vector<string> vwords;
@@ -244,23 +255,34 @@ string get_text_file(string filename){
 	file.open(filename);
 	if (file.is_open()) {
 		string s;
-		//leemos del vector.
 		while (!file.eof()) {
 			file >> s;
 			vwords.push_back(s);
 		}
 	}
 	file.close();
-	//pasamos el word iessimo a un solo string con sus espacios.
+	//CONVERTING TO STRING.
 	for (int j = 0; j < int(vwords.size()); ++j) {
 		str += vwords[j];
-		str += " "; //ojo con el ultimo espacio de la ultima word.
+		str += " "; //space beetwen words.
 		}
-	//print debugger
-	//cout << "el string of the file  " << i << " is " << endl;
+
 	//cout  << str << endl;	
 	return str;
 }
+
+
+
+void reading_documents() {
+	for (int i = 1; i <= 20; ++i) {
+		stringstream stream; 
+        string palabra; 
+	    stream << i; 
+        palabra = stream.str();
+		palabra +=".txt";
+		textos.push_back(get_text_file(palabra.c_str()));
+	}
+  }
 
 vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_hash_functions){
 	vector_of_hash_functions vh = {};
@@ -277,24 +299,14 @@ vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(cons
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
 	return vf;	
-}
+;
 
 
 int main(void){
-	vector<string> textos;
-    //vamos leyendo los  20 documentos y lo vamos metiendo en el documento
-	for (int i = 1; i <= 20; ++i) {
-		stringstream stream; 
-        string palabra; 
-	    stream << i; 
-        palabra = stream.str();
-		palabra +=".txt";
-		textos.push_back(get_text_file(palabra.c_str()));
-	}
 	
-	const size_t number_of_hash_functions = 100;
-	const size_t number_of_vector_of_hash_function_for_vectors = 100;
-	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1};
+    //Reading Documents
+     reading_documents();
+	
 	
 	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
 	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions);
@@ -308,7 +320,7 @@ int main(void){
 			cks.push_back(get_k_shingles_from_string(k, s));
 		}
 		signature_matrix sm = compute_signature_matrix(cks, vh);
-		//printf("Para k %lu la media cuadrada de los errores es %f \n",k, test(cks, sm));
+		
 		cout << "Para la k " << k << " la media cuadrada de los errores es: " << test(cks, sm) << endl;
 		//fin de los calculos que solo dependen de k y number_of_hash_functions
 		
@@ -316,15 +328,14 @@ int main(void){
 		if (experimento_lsh){		
 		for (float t : t_values) {
 			for (size_t r = 1; r < 3; ++r) {
-				//COMPUTO DE SIMILARIDADES JACCARD Y LSH
+				//COMPUTATION OF JACCARD & LSH SIMILARITIES
 				cout << "Candidatos según LSH constantes k " << k << " r " << r << " t " << t << endl;
 				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
 				for (auto& k : pairconcidence){ 
-					cout << " documentos " << k.first << " " << k.second; // << endl; 
-					//cout << "estoy calculando la del lsh" << endl;
+					cout << " documentos " << k.first << " " << k.second; 
 					const double js_sm = jaccard_similarity(k.first, k.second, sm);
 					const double js = jaccard_similarity(cks.at(k.first), cks.at(k.second));
-					cout << " jaccard sm " <<  js_sm;// << endl;
+					cout << " jaccard sm " <<  js_sm;
 					cout << " jaccard directo " << js;
 					cout << " error relativo " << absolute((js-js_sm)/(js +  0.000001));
 					cout << endl;
