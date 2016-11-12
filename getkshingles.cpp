@@ -11,11 +11,9 @@
 #include <sstream> 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 #include <fstream>
 #include <iomanip>
-#include <chrono>
-#include <ctime>
 #include <thread>
 using namespace std;
 
@@ -54,6 +52,8 @@ k_shingles get_k_shingles_from_string(const size_t& k, const string& str){
  * jaccard similarity of two sets is the number of elements in both divided by the number of elements in one or the other
  */
 double jaccard_similarity(const k_shingles& A, const k_shingles& B){
+	//clock_t time_start, time_end;
+	//time_start = clock();
 	k_shingles C = B;
 	uint_fast64_t count_intersection = 0;
 	uint_fast64_t count_union = 0;
@@ -76,6 +76,8 @@ double jaccard_similarity(const k_shingles& A, const k_shingles& B){
 	}
 	count_union += C.size();
 	C.clear();
+	//time_end = clock();
+	//cout << "Jaccard sim. elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
 	return double(count_intersection)/double(count_union);	
 }
 
@@ -131,10 +133,14 @@ signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, c
  * jaccard similarity given a signature matrix and the indexes of two k_shingles
  */
 double jaccard_similarity(const size_t index1, const size_t index2, const signature_matrix& sm){
+	//clock_t time_start, time_end;
+	//time_start = clock();
 	size_t acc = 0; 
 	for (size_t j = 0; j < sm.size(); j += 1){
 		acc += int(sm.at(j).at(index1) == sm.at(j).at(index2));
 	}
+	//time_end = clock();
+	//cout << "sim (document) elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
 	return acc/double(sm.size());
 }
 
@@ -179,7 +185,8 @@ hash_function_for_vectors get_hash_function_for_vectors(const size_t a , const s
  */
  
 set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_function_for_vectors& vf, float t, size_t r){
-	
+	//clock_t time_start, time_end;
+	//time_start = clock();
 	map< pair<size_t, size_t> , size_t> coincidencias; //si quereis cambiad el tipo
 	size_t nbands = int(ceil(sm.size()/r));
 	for (size_t i = 0; i < nbands; i += 1){
@@ -216,6 +223,8 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 			pair_candidates.insert(it.first);
 		}
 	}
+	//time_end = clock();
+	//cout << "LSH elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
 	return pair_candidates;
 }
 
@@ -307,6 +316,8 @@ int main(void) {
 	//Reading Documents
      reading_documents();
 	
+	clock_t time_start, time_end;
+	time_start = clock();
 	
 	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
 	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions);
@@ -344,6 +355,7 @@ int main(void) {
 		   }
 		}
 	 }
-    //cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
+    time_end = clock();
+	cout << "total elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
 	return 0;
 } 
