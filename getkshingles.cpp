@@ -123,7 +123,7 @@ signature_matrix compute_signature_matrix(const collection_of_k_shingles& cks, c
 /*
  * jaccard similarity given a signature matrix and the indexes of two k_shingles
  */
-double jaccard_similarity(const size_t index1, const size_t index2, signature_matrix& sm){
+double jaccard_similarity(const size_t index1, const size_t index2, const signature_matrix& sm){
 	size_t acc = 0; 
 	for (size_t j = 0; j < sm.size(); j += 1){
 		acc += int(sm.at(j).at(index1) == sm.at(j).at(index2));
@@ -150,13 +150,13 @@ void print(const signature_matrix& sm){
  * https://en.wikipedia.org/wiki/Universal_hashing#Hashing_integers
  * p should be prime >= m
  */
-hash_function get_hash_function(size_t a, size_t c /* , size_t p */){
+hash_function get_hash_function(const size_t a, const size_t c /* , const size_t p */){
 	return [a,c /* ,p */](size_t x) -> size_t {
 		return (a*x+c)/* %p */;
 	};
 }
 
-hash_function_for_vectors get_hash_function_for_vectors(size_t a , size_t c /* , size_t p */){
+hash_function_for_vectors get_hash_function_for_vectors(const size_t a , const size_t c /* , size_t p */){
 	return [a,c /* ,p */](vector<size_t> x) -> size_t {
 		size_t ret = 0;
 		for (size_t k : x){
@@ -214,73 +214,108 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 
 double absolute(const double s){return s > 0 ? s : -s;}
 
-int main(void){
-	const clock_t begin_time = clock();
-    
-    vector<string> textos;
-    //vamos leyendo los  20 documentos y lo vamos metiendo en el documento
-	for (int i = 1; i <= 20; ++i) {
-		
-		string str = "";
-		vector<string> vwords;
-		ifstream file;
-		
-		stringstream stream; 
-        string palabra; 
-	    stream << i; 
-        palabra = stream.str();
-		palabra +=".txt";
-		
-		
-		file.open(palabra.c_str());
-		if (file.is_open()) {
+double get_relative_error(const collection_of_k_shingles& cks, const signature_matrix& sm, const size_t index1, const size_t index2){
+	const double js_sm = jaccard_similarity(index1, index2, sm);
+	const double js = jaccard_similarity(cks.at(index1), cks.at(index2));
+	const double epsilon = 0.0001;
+	return absolute((js-js_sm)/(absolute(js)+epsilon));
+}
+
+/*
+ * returns the square mean of the errors between the two methods for jaccard similarity 
+ */
+double test(const collection_of_k_shingles& cks, const signature_matrix& sm){
+	double ret = 0;
+	size_t count = 0;
+	for (size_t u = 0; u < cks.size(); u += 1){
+		for (size_t v = u+1; v < cks.size(); v += 1){
+			const double err = get_relative_error(cks, sm, u, v);
+			ret += err*err;
+			count += 1;
+		}
+	}
+	return sqrt(ret/count);
+}
+
+string get_text_file(string filename){
+	string str = "";
+	vector<string> vwords;
+	ifstream file;
+	file.open(filename);
+	if (file.is_open()) {
 		string s;
 		//leemos del vector.
 		while (!file.eof()) {
 			file >> s;
 			vwords.push_back(s);
-			}
 		}
-		file.close();
-		//pasamos el word iessimo a un solo string con sus espacios.
-		for (int j = 0; j < int(vwords.size()); ++j) {
-			str += vwords[j];
-			str += " "; //ojo con el ultimo espacio de la ultima word.
-			}
-		//print debugger
-		cout << "el string of the file  " << i << " is " << endl;
-		cout  << str << endl;
-		textos.push_back(str);
-	
+	}
+	file.close();
+	//pasamos el word iessimo a un solo string con sus espacios.
+	for (int j = 0; j < int(vwords.size()); ++j) {
+		str += vwords[j];
+		str += " "; //ojo con el ultimo espacio de la ultima word.
 		}
-	
-	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
-	const size_t number_of_hash_functions = 100;
-	vector_of_hash_functions vh = {[](size_t a){return a;}};
+	//print debugger
+	//cout << "el string of the file  " << i << " is " << endl;
+	//cout  << str << endl;	
+	return str;
+}
+
+vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_hash_functions){
+	vector_of_hash_functions vh = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
 		vh.push_back(get_hash_function(rand(),rand()));
 	}
-	const size_t number_of_vector_of_hash_function_for_vectors = 100;
-	vector_of_hash_function_for_vectors vf = vector_of_hash_function_for_vectors ();
+	return vh;	
+}
+vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(const size_t number_of_vector_of_hash_function_for_vectors){
+	vector_of_hash_function_for_vectors vf = {};
+	srand(time(0));
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
 		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
 	}
-	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1};	
-    for (size_t k = 1; k < 3; ++k){
+	return vf;	
+}
+
+
+int main(void){
+	vector<string> textos;
+    //vamos leyendo los  20 documentos y lo vamos metiendo en el documento
+	for (int i = 1; i <= 20; ++i) {
+		stringstream stream; 
+        string palabra; 
+	    stream << i; 
+        palabra = stream.str();
+		palabra +=".txt";
+		textos.push_back(get_text_file(palabra.c_str()));
+	}
+	
+	const size_t number_of_hash_functions = 100;
+	const size_t number_of_vector_of_hash_function_for_vectors = 100;
+	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1};
+	
+	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
+	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions);
+	//ahora creamos las funciones que hashearan las bandas del LSH
+	vector_of_hash_function_for_vectors vf = get_vector_of_hash_function_for_vectors(number_of_vector_of_hash_function_for_vectors);
+	
+    for (size_t k = 5; k < 10; ++k){
+		//ahora hacemos los calculos que solo dependen de k y number_of_hash_functions
+		collection_of_k_shingles cks;
+		for (string s : textos){
+			cks.push_back(get_k_shingles_from_string(k, s));
+		}
+		signature_matrix sm = compute_signature_matrix(cks, vh);
+		printf("Para k %lu la media cuadrada de los errores es %f \n",k, test(cks, sm));
+		//fin de los calculos que solo dependen de k y number_of_hash_functions
 		
+		const bool experimento_lsh = false;
+		if (experimento_lsh){		
 		for (float t : t_values) {
 			for (size_t r = 1; r < 3; ++r) {
-				collection_of_k_shingles cks;
-				
-				for (int i = 0; i < 20; ++i){
-					k_shingles A = get_k_shingles_from_string(k, textos[i]);
-					//print(A);
-					//lo metemos en la coleccion
-					cks.push_back(A);
-				}
-				signature_matrix sm = compute_signature_matrix(cks, vh); //no tocar
-				
+				/*
 				for (int i = 0; i < int(cks.size()); ++i) {
 					for (int j = i+1;j < int(cks.size()); ++j) {
 						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
@@ -296,11 +331,11 @@ int main(void){
 						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
 						}
 					//cout << endl;
-				}
+				}*/
 				//Mirate este trozo de codigo.
 				//solo quiero obtener el set de lsh y imprimrlo , pero hace nada
 				//compila y tal ejecuta , pero el lsh no lo esta haciendo
-				cout << "Candidatos según LSH constantes k " << k << " r " << r << " t " << t ; // << endl;
+				cout << "Candidatos según LSH constantes k " << k << " r " << r << " t " << t << endl;
 				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
 				for (auto& k : pairconcidence){ 
 					cout << " documentos " << k.first << " " << k.second; // << endl; 
@@ -311,15 +346,11 @@ int main(void){
 					cout << " jaccard directo " << js;
 					cout << " error relativo " << absolute((js-js_sm)/js);
 					cout << endl;
-					
-					}
-		
-				
+				}
 			  }
 		   }
 		}
-	
-    cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
+	}
+    //cout << "elapsed time " << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " seconds" << endl;
 	return 0;
-	
-  } 
+} 
