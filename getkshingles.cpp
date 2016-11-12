@@ -212,6 +212,8 @@ set<pair<size_t, size_t> > lsh(signature_matrix& sm, const vector_of_hash_functi
 	return pair_candidates;
 }
 
+double absolute(const double s){return s > 0 ? s : -s;}
+
 int main(void){
 	const clock_t begin_time = clock();
     
@@ -303,11 +305,11 @@ int main(void){
 				for (auto& k : pairconcidence){ 
 					cout << " documentos " << k.first << " " << k.second; // << endl; 
 					//cout << "estoy calculando la del lsh" << endl;
-					const float_t js_sm = jaccard_similarity(k.first, k.second, sm);
-					const float_t js = jaccard_similarity(cks.at(k.first), cks.at(k.second));
+					const double js_sm = jaccard_similarity(k.first, k.second, sm);
+					const double js = jaccard_similarity(cks.at(k.first), cks.at(k.second));
 					cout << " jaccard sm " <<  js_sm;// << endl;
 					cout << " jaccard directo " << js;
-					cout << " error relativo " << abs(js-js_sm)/js;
+					cout << " error relativo " << absolute((js-js_sm)/js);
 					cout << endl;
 					
 					}
