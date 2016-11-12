@@ -308,33 +308,15 @@ int main(void){
 			cks.push_back(get_k_shingles_from_string(k, s));
 		}
 		signature_matrix sm = compute_signature_matrix(cks, vh);
-		printf("Para k %lu la media cuadrada de los errores es %f \n",k, test(cks, sm));
+		//printf("Para k %lu la media cuadrada de los errores es %f \n",k, test(cks, sm));
+		cout << "Para la k " << k << " la media cuadrada de los errores es: " << test(cks, sm) << endl;
 		//fin de los calculos que solo dependen de k y number_of_hash_functions
 		
-		const bool experimento_lsh = false;
+		const bool experimento_lsh = true;
 		if (experimento_lsh){		
 		for (float t : t_values) {
 			for (size_t r = 1; r < 3; ++r) {
-				/*
-				for (int i = 0; i < int(cks.size()); ++i) {
-					for (int j = i+1;j < int(cks.size()); ++j) {
-						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es: " << jaccard_similarity(cks.at(i),cks.at(j)) << endl; 
-						}
-					//cout << endl;
-				}
-				//cout << endl;
-				//cout << "ahora calculamos la variante de jaccard_similarity(i,j,sm)" << endl;
-				//cout << "de momento no funciona la jaccard_similarity(i,j,sm) por eso da zero's siempre" << endl;	
-				
-				for (int i = 0; i < int(cks.size()); ++i) {
-					for (int j = i + 1; j < int(cks.size()); ++j) {
-						//cout << "jaccard similarity " << i+1 << " y " << j+1 << " es " <<  jaccard_similarity(i,j,sm) << endl; 
-						}
-					//cout << endl;
-				}*/
-				//Mirate este trozo de codigo.
-				//solo quiero obtener el set de lsh y imprimrlo , pero hace nada
-				//compila y tal ejecuta , pero el lsh no lo esta haciendo
+				//COMPUTO DE SIMILARIDADES JACCARD Y LSH
 				cout << "Candidatos según LSH constantes k " << k << " r " << r << " t " << t << endl;
 				set<pair<size_t, size_t> > pairconcidence =  lsh(sm,vf,t,r);
 				for (auto& k : pairconcidence){ 
@@ -344,7 +326,7 @@ int main(void){
 					const double js = jaccard_similarity(cks.at(k.first), cks.at(k.second));
 					cout << " jaccard sm " <<  js_sm;// << endl;
 					cout << " jaccard directo " << js;
-					cout << " error relativo " << absolute((js-js_sm)/js);
+					cout << " error relativo " << absolute((js-js_sm)/(js +  0.000001));
 					cout << endl;
 				}
 			  }
