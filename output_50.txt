@@ -1,0 +1,1242 @@
+Para la k 5 la media cuadrada de los errores es: 0.971327
+Candidatos según LSH constantes k 5 r 1 t 0.1
+ documentos 0 1 jaccard sm 0.22 jaccard directo 0.0900901 error relativo 1.44198
+ documentos 0 2 jaccard sm 0.23 jaccard directo 0.106061 error relativo 1.16856
+ documentos 0 3 jaccard sm 0.22 jaccard directo 0.149847 error relativo 0.46816
+ documentos 0 4 jaccard sm 0.24 jaccard directo 0.0755287 error relativo 2.17757
+ documentos 0 5 jaccard sm 0.2 jaccard directo 0.115502 error relativo 0.731573
+ documentos 0 6 jaccard sm 0.22 jaccard directo 0.122024 error relativo 0.80292
+ documentos 0 7 jaccard sm 0.26 jaccard directo 0.155015 error relativo 0.677251
+ documentos 0 8 jaccard sm 0.26 jaccard directo 0.140673 error relativo 0.848255
+ documentos 0 9 jaccard sm 0.29 jaccard directo 0.139466 error relativo 1.07935
+ documentos 0 10 jaccard sm 0.24 jaccard directo 0.0991254 error relativo 1.42116
+ documentos 0 11 jaccard sm 0.27 jaccard directo 0.135294 error relativo 0.995645
+ documentos 0 12 jaccard sm 0.29 jaccard directo 0.128743 error relativo 1.25255
+ documentos 0 13 jaccard sm 0.24 jaccard directo 0.12963 error relativo 0.851422
+ documentos 0 14 jaccard sm 0.25 jaccard directo 0.126543 error relativo 0.975602
+ documentos 0 15 jaccard sm 0.2 jaccard directo 0.0823864 error relativo 1.42757
+ documentos 0 16 jaccard sm 0.18 jaccard directo 0.124629 error relativo 0.444282
+ documentos 0 17 jaccard sm 0.27 jaccard directo 0.123494 error relativo 1.18633
+ documentos 0 18 jaccard sm 0.15 jaccard directo 0.0935673 error relativo 0.603119
+ documentos 0 19 jaccard sm 0.27 jaccard directo 0.131098 error relativo 1.05953
+ documentos 1 2 jaccard sm 0.21 jaccard directo 0.0759878 error relativo 1.76358
+ documentos 1 3 jaccard sm 0.22 jaccard directo 0.119632 error relativo 0.838967
+ documentos 1 4 jaccard sm 0.19 jaccard directo 0.0648148 error relativo 1.9314
+ documentos 1 5 jaccard sm 0.23 jaccard directo 0.119497 error relativo 0.924729
+ documentos 1 6 jaccard sm 0.19 jaccard directo 0.0892857 error relativo 1.12799
+ documentos 1 7 jaccard sm 0.22 jaccard directo 0.114804 error relativo 0.916308
+ documentos 1 8 jaccard sm 0.21 jaccard directo 0.0870871 error relativo 1.41136
+ documentos 1 9 jaccard sm 0.2 jaccard directo 0.130303 error relativo 0.53488
+ documentos 1 10 jaccard sm 0.18 jaccard directo 0.10574 error relativo 0.702279
+ documentos 1 11 jaccard sm 0.22 jaccard directo 0.0775862 error relativo 1.83553
+ documentos 1 12 jaccard sm 0.25 jaccard directo 0.10241 error relativo 1.44116
+ documentos 1 13 jaccard sm 0.21 jaccard directo 0.105919 error relativo 0.982638
+ documentos 1 14 jaccard sm 0.24 jaccard directo 0.0792683 error relativo 2.02767
+ documentos 1 15 jaccard sm 0.17 jaccard directo 0.0979228 error relativo 0.736053
+ documentos 1 16 jaccard sm 0.22 jaccard directo 0.135802 error relativo 0.619995
+ documentos 1 17 jaccard sm 0.21 jaccard directo 0.077381 error relativo 1.71382
+ documentos 1 18 jaccard sm 0.17 jaccard directo 0.0835821 error relativo 1.03392
+ documentos 1 19 jaccard sm 0.24 jaccard directo 0.0746269 error relativo 2.21597
+ documentos 2 3 jaccard sm 0.18 jaccard directo 0.118902 error relativo 0.513842
+ documentos 2 4 jaccard sm 0.2 jaccard directo 0.0776398 error relativo 1.57598
+ documentos 2 5 jaccard sm 0.22 jaccard directo 0.151125 error relativo 0.455742
+ documentos 2 6 jaccard sm 0.22 jaccard directo 0.0952381 error relativo 1.30999
+ documentos 2 7 jaccard sm 0.2 jaccard directo 0.107463 error relativo 0.861103
+ documentos 2 8 jaccard sm 0.24 jaccard directo 0.1375 error relativo 0.745449
+ documentos 2 9 jaccard sm 0.16 jaccard directo 0.0997067 error relativo 0.6047
+ documentos 2 10 jaccard sm 0.21 jaccard directo 0.118541 error relativo 0.771532
+ documentos 2 11 jaccard sm 0.23 jaccard directo 0.125373 error relativo 0.834517
+ documentos 2 12 jaccard sm 0.2 jaccard directo 0.128834 error relativo 0.552377
+ documentos 2 13 jaccard sm 0.2 jaccard directo 0.115625 error relativo 0.729723
+ documentos 2 14 jaccard sm 0.19 jaccard directo 0.0690691 error relativo 1.75084
+ documentos 2 15 jaccard sm 0.21 jaccard directo 0.110448 error relativo 0.901343
+ documentos 2 16 jaccard sm 0.14 jaccard directo 0.12462 error relativo 0.123414
+ documentos 2 17 jaccard sm 0.21 jaccard directo 0.10303 error relativo 1.03823
+ documentos 2 18 jaccard sm 0.17 jaccard directo 0.102719 error relativo 0.654994
+ documentos 2 19 jaccard sm 0.24 jaccard directo 0.134796 error relativo 0.780459
+ documentos 3 4 jaccard sm 0.17 jaccard directo 0.0914634 error relativo 0.858657
+ documentos 3 5 jaccard sm 0.23 jaccard directo 0.135385 error relativo 0.698858
+ documentos 3 6 jaccard sm 0.16 jaccard directo 0.0985507 error relativo 0.623523
+ documentos 3 7 jaccard sm 0.23 jaccard directo 0.168196 error relativo 0.367452
+ documentos 3 8 jaccard sm 0.21 jaccard directo 0.150307 error relativo 0.39714
+ documentos 3 9 jaccard sm 0.22 jaccard directo 0.159159 error relativo 0.382262
+ documentos 3 10 jaccard sm 0.16 jaccard directo 0.104956 error relativo 0.524439
+ documentos 3 11 jaccard sm 0.21 jaccard directo 0.118156 error relativo 0.77731
+ documentos 3 12 jaccard sm 0.21 jaccard directo 0.0859599 error relativo 1.44298
+ documentos 3 13 jaccard sm 0.24 jaccard directo 0.132308 error relativo 0.813947
+ documentos 3 14 jaccard sm 0.2 jaccard directo 0.0988024 error relativo 1.02423
+ documentos 3 15 jaccard sm 0.17 jaccard directo 0.100575 error relativo 0.690279
+ documentos 3 16 jaccard sm 0.24 jaccard directo 0.158055 error relativo 0.518458
+ documentos 3 17 jaccard sm 0.19 jaccard directo 0.109467 error relativo 0.735669
+ documentos 3 18 jaccard sm 0.17 jaccard directo 0.112426 error relativo 0.512101
+ documentos 3 19 jaccard sm 0.19 jaccard directo 0.123494 error relativo 0.538532
+ documentos 4 5 jaccard sm 0.2 jaccard directo 0.100946 error relativo 0.98124
+ documentos 4 6 jaccard sm 0.2 jaccard directo 0.101227 error relativo 0.975748
+ documentos 4 7 jaccard sm 0.23 jaccard directo 0.120743 error relativo 0.904864
+ documentos 4 8 jaccard sm 0.19 jaccard directo 0.0757576 error relativo 1.50798
+ documentos 4 9 jaccard sm 0.31 jaccard directo 0.140187 error relativo 1.21132
+ documentos 4 10 jaccard sm 0.21 jaccard directo 0.0878788 error relativo 1.38964
+ documentos 4 11 jaccard sm 0.26 jaccard directo 0.135802 error relativo 0.914539
+ documentos 4 12 jaccard sm 0.3 jaccard directo 0.132492 error relativo 1.26428
+ documentos 4 13 jaccard sm 0.13 jaccard directo 0.0807453 error relativo 0.609992
+ documentos 4 14 jaccard sm 0.21 jaccard directo 0.101587 error relativo 1.06718
+ documentos 4 15 jaccard sm 0.21 jaccard directo 0.12037 error relativo 0.744609
+ documentos 4 16 jaccard sm 0.19 jaccard directo 0.0972644 error relativo 0.953428
+ documentos 4 17 jaccard sm 0.3 jaccard directo 0.156352 error relativo 0.918744
+ documentos 4 18 jaccard sm 0.22 jaccard directo 0.133758 error relativo 0.644757
+ documentos 4 19 jaccard sm 0.23 jaccard directo 0.0928793 error relativo 1.47632
+ documentos 5 6 jaccard sm 0.18 jaccard directo 0.111111 error relativo 0.619994
+ documentos 5 7 jaccard sm 0.21 jaccard directo 0.123494 error relativo 0.700482
+ documentos 5 8 jaccard sm 0.19 jaccard directo 0.109091 error relativo 0.74166
+ documentos 5 9 jaccard sm 0.18 jaccard directo 0.102339 error relativo 0.75885
+ documentos 5 10 jaccard sm 0.14 jaccard directo 0.0882353 error relativo 0.58666
+ documentos 5 11 jaccard sm 0.24 jaccard directo 0.131343 error relativo 0.827266
+ documentos 5 12 jaccard sm 0.22 jaccard directo 0.111111 error relativo 0.979991
+ documentos 5 13 jaccard sm 0.19 jaccard directo 0.146965 error relativo 0.292824
+ documentos 5 14 jaccard sm 0.16 jaccard directo 0.0686567 error relativo 1.33042
+ documentos 5 15 jaccard sm 0.17 jaccard directo 0.0967742 error relativo 0.756659
+ documentos 5 16 jaccard sm 0.2 jaccard directo 0.141104 error relativo 0.417388
+ documentos 5 17 jaccard sm 0.23 jaccard directo 0.133127 error relativo 0.727669
+ documentos 5 18 jaccard sm 0.2 jaccard directo 0.129231 error relativo 0.547615
+ documentos 5 19 jaccard sm 0.2 jaccard directo 0.10303 error relativo 0.941167
+ documentos 6 7 jaccard sm 0.16 jaccard directo 0.0758427 error relativo 1.10961
+ documentos 6 8 jaccard sm 0.2 jaccard directo 0.109145 error relativo 0.832425
+ documentos 6 9 jaccard sm 0.19 jaccard directo 0.118497 error relativo 0.60341
+ documentos 6 10 jaccard sm 0.23 jaccard directo 0.120944 error relativo 0.9017
+ documentos 6 11 jaccard sm 0.27 jaccard directo 0.144118 error relativo 0.873463
+ documentos 6 12 jaccard sm 0.25 jaccard directo 0.120944 error relativo 1.06706
+ documentos 6 13 jaccard sm 0.22 jaccard directo 0.125 error relativo 0.759994
+ documentos 6 14 jaccard sm 0.24 jaccard directo 0.146417 error relativo 0.639145
+ documentos 6 15 jaccard sm 0.2 jaccard directo 0.0971429 error relativo 1.05881
+ documentos 6 16 jaccard sm 0.18 jaccard directo 0.136905 error relativo 0.31478
+ documentos 6 17 jaccard sm 0.24 jaccard directo 0.129129 error relativo 0.858598
+ documentos 6 18 jaccard sm 0.19 jaccard directo 0.0991254 error relativo 0.916755
+ documentos 6 19 jaccard sm 0.22 jaccard directo 0.109792 error relativo 1.00377
+ documentos 7 8 jaccard sm 0.28 jaccard directo 0.195584 error relativo 0.431611
+ documentos 7 9 jaccard sm 0.25 jaccard directo 0.147059 error relativo 0.699995
+ documentos 7 10 jaccard sm 0.2 jaccard directo 0.103746 error relativo 0.927769
+ documentos 7 11 jaccard sm 0.25 jaccard directo 0.123209 error relativo 1.02906
+ documentos 7 12 jaccard sm 0.23 jaccard directo 0.126471 error relativo 0.818598
+ documentos 7 13 jaccard sm 0.2 jaccard directo 0.123867 error relativo 0.614629
+ documentos 7 14 jaccard sm 0.22 jaccard directo 0.0943953 error relativo 1.33061
+ documentos 7 15 jaccard sm 0.2 jaccard directo 0.102564 error relativo 0.949991
+ documentos 7 16 jaccard sm 0.22 jaccard directo 0.132353 error relativo 0.662217
+ documentos 7 17 jaccard sm 0.24 jaccard directo 0.138138 error relativo 0.737386
+ documentos 7 18 jaccard sm 0.18 jaccard directo 0.107872 error relativo 0.668642
+ documentos 7 19 jaccard sm 0.25 jaccard directo 0.138973 error relativo 0.798907
+ documentos 8 9 jaccard sm 0.23 jaccard directo 0.136499 error relativo 0.684995
+ documentos 8 10 jaccard sm 0.19 jaccard directo 0.0930233 error relativo 1.04249
+ documentos 8 11 jaccard sm 0.23 jaccard directo 0.112717 error relativo 1.0405
+ documentos 8 12 jaccard sm 0.24 jaccard directo 0.112426 error relativo 1.13473
+ documentos 8 13 jaccard sm 0.17 jaccard directo 0.0798817 error relativo 1.12813
+ documentos 8 14 jaccard sm 0.21 jaccard directo 0.0963855 error relativo 1.17874
+ documentos 8 15 jaccard sm 0.17 jaccard directo 0.0888252 error relativo 0.913861
+ documentos 8 16 jaccard sm 0.19 jaccard directo 0.118343 error relativo 0.605495
+ documentos 8 17 jaccard sm 0.22 jaccard directo 0.113772 error relativo 0.933676
+ documentos 8 18 jaccard sm 0.19 jaccard directo 0.106825 error relativo 0.778604
+ documentos 8 19 jaccard sm 0.24 jaccard directo 0.128049 error relativo 0.874279
+ documentos 9 10 jaccard sm 0.3 jaccard directo 0.141593 error relativo 1.11874
+ documentos 9 11 jaccard sm 0.27 jaccard directo 0.14121 error relativo 0.912034
+ documentos 9 12 jaccard sm 0.27 jaccard directo 0.112069 error relativo 1.40922
+ documentos 9 13 jaccard sm 0.23 jaccard directo 0.119048 error relativo 0.931992
+ documentos 9 14 jaccard sm 0.26 jaccard directo 0.119403 error relativo 1.17749
+ documentos 9 15 jaccard sm 0.23 jaccard directo 0.123563 error relativo 0.861388
+ documentos 9 16 jaccard sm 0.18 jaccard directo 0.150888 error relativo 0.19294
+ documentos 9 17 jaccard sm 0.31 jaccard directo 0.146707 error relativo 1.11305
+ documentos 9 18 jaccard sm 0.19 jaccard directo 0.139466 error relativo 0.362338
+ documentos 9 19 jaccard sm 0.23 jaccard directo 0.107558 error relativo 1.13837
+ documentos 10 11 jaccard sm 0.31 jaccard directo 0.189602 error relativo 0.634997
+ documentos 10 12 jaccard sm 0.21 jaccard directo 0.11437 error relativo 0.836147
+ documentos 10 13 jaccard sm 0.14 jaccard directo 0.108108 error relativo 0.294997
+ documentos 10 14 jaccard sm 0.26 jaccard directo 0.105105 error relativo 1.4737
+ documentos 10 15 jaccard sm 0.22 jaccard directo 0.142857 error relativo 0.539996
+ documentos 10 16 jaccard sm 0.19 jaccard directo 0.116959 error relativo 0.624495
+ documentos 10 17 jaccard sm 0.18 jaccard directo 0.109145 error relativo 0.649183
+ documentos 10 18 jaccard sm 0.15 jaccard directo 0.122024 error relativo 0.229266
+ documentos 10 19 jaccard sm 0.19 jaccard directo 0.1 error relativo 0.899991
+ documentos 11 12 jaccard sm 0.31 jaccard directo 0.150888 error relativo 1.0545
+ documentos 11 13 jaccard sm 0.22 jaccard directo 0.125 error relativo 0.759994
+ documentos 11 14 jaccard sm 0.27 jaccard directo 0.142424 error relativo 0.895738
+ documentos 11 15 jaccard sm 0.25 jaccard directo 0.149123 error relativo 0.676466
+ documentos 11 16 jaccard sm 0.2 jaccard directo 0.15 error relativo 0.333331
+ documentos 11 17 jaccard sm 0.24 jaccard directo 0.149254 error relativo 0.607996
+ documentos 11 18 jaccard sm 0.23 jaccard directo 0.122093 error relativo 0.883802
+ documentos 11 19 jaccard sm 0.22 jaccard directo 0.110145 error relativo 0.997359
+ documentos 12 13 jaccard sm 0.21 jaccard directo 0.118182 error relativo 0.776917
+ documentos 12 14 jaccard sm 0.25 jaccard directo 0.121951 error relativo 1.04999
+ documentos 12 15 jaccard sm 0.21 jaccard directo 0.103448 error relativo 1.02999
+ documentos 12 16 jaccard sm 0.19 jaccard directo 0.0945559 error relativo 1.00938
+ documentos 12 17 jaccard sm 0.29 jaccard directo 0.109145 error relativo 1.65701
+ documentos 12 18 jaccard sm 0.25 jaccard directo 0.105572 error relativo 1.36804
+ documentos 12 19 jaccard sm 0.23 jaccard directo 0.126506 error relativo 0.818089
+ documentos 13 14 jaccard sm 0.17 jaccard directo 0.0753012 error relativo 1.25758
+ documentos 13 15 jaccard sm 0.14 jaccard directo 0.106825 error relativo 0.310553
+ documentos 13 16 jaccard sm 0.15 jaccard directo 0.12766 error relativo 0.174999
+ documentos 13 17 jaccard sm 0.25 jaccard directo 0.13354 error relativo 0.872086
+ documentos 13 18 jaccard sm 0.17 jaccard directo 0.0958084 error relativo 0.774367
+ documentos 13 19 jaccard sm 0.22 jaccard directo 0.110092 error relativo 0.998324
+ documentos 14 15 jaccard sm 0.23 jaccard directo 0.103858 error relativo 1.21456
+ documentos 14 16 jaccard sm 0.2 jaccard directo 0.0914454 error relativo 1.18708
+ documentos 14 17 jaccard sm 0.22 jaccard directo 0.106383 error relativo 1.06799
+ documentos 14 18 jaccard sm 0.19 jaccard directo 0.109422 error relativo 0.736382
+ documentos 14 19 jaccard sm 0.28 jaccard directo 0.134796 error relativo 1.0772
+ documentos 15 16 jaccard sm 0.15 jaccard directo 0.0997151 error relativo 0.504281
+ documentos 15 17 jaccard sm 0.25 jaccard directo 0.130952 error relativo 0.909084
+ documentos 15 18 jaccard sm 0.18 jaccard directo 0.120588 error relativo 0.492679
+ documentos 15 19 jaccard sm 0.23 jaccard directo 0.125 error relativo 0.839993
+ documentos 16 17 jaccard sm 0.17 jaccard directo 0.118343 error relativo 0.436496
+ documentos 16 18 jaccard sm 0.24 jaccard directo 0.121302 error relativo 0.978529
+ documentos 16 19 jaccard sm 0.21 jaccard directo 0.105882 error relativo 0.983324
+ documentos 17 18 jaccard sm 0.25 jaccard directo 0.151235 error relativo 0.653057
+ documentos 17 19 jaccard sm 0.3 jaccard directo 0.138462 error relativo 1.16666
+ documentos 18 19 jaccard sm 0.2 jaccard directo 0.107463 error relativo 0.861103
+total elapsed 0.071 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.1
+ documentos 4 17 jaccard sm 0.3 jaccard directo 0.156352 error relativo 0.918744
+ documentos 15 17 jaccard sm 0.25 jaccard directo 0.130952 error relativo 0.909084
+ documentos 17 19 jaccard sm 0.3 jaccard directo 0.138462 error relativo 1.16666
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.2
+ documentos 0 1 jaccard sm 0.22 jaccard directo 0.0900901 error relativo 1.44198
+ documentos 0 2 jaccard sm 0.23 jaccard directo 0.106061 error relativo 1.16856
+ documentos 0 3 jaccard sm 0.22 jaccard directo 0.149847 error relativo 0.46816
+ documentos 0 4 jaccard sm 0.24 jaccard directo 0.0755287 error relativo 2.17757
+ documentos 0 6 jaccard sm 0.22 jaccard directo 0.122024 error relativo 0.80292
+ documentos 0 7 jaccard sm 0.26 jaccard directo 0.155015 error relativo 0.677251
+ documentos 0 8 jaccard sm 0.26 jaccard directo 0.140673 error relativo 0.848255
+ documentos 0 9 jaccard sm 0.29 jaccard directo 0.139466 error relativo 1.07935
+ documentos 0 10 jaccard sm 0.24 jaccard directo 0.0991254 error relativo 1.42116
+ documentos 0 11 jaccard sm 0.27 jaccard directo 0.135294 error relativo 0.995645
+ documentos 0 12 jaccard sm 0.29 jaccard directo 0.128743 error relativo 1.25255
+ documentos 0 13 jaccard sm 0.24 jaccard directo 0.12963 error relativo 0.851422
+ documentos 0 14 jaccard sm 0.25 jaccard directo 0.126543 error relativo 0.975602
+ documentos 0 17 jaccard sm 0.27 jaccard directo 0.123494 error relativo 1.18633
+ documentos 0 19 jaccard sm 0.27 jaccard directo 0.131098 error relativo 1.05953
+ documentos 1 2 jaccard sm 0.21 jaccard directo 0.0759878 error relativo 1.76358
+ documentos 1 3 jaccard sm 0.22 jaccard directo 0.119632 error relativo 0.838967
+ documentos 1 5 jaccard sm 0.23 jaccard directo 0.119497 error relativo 0.924729
+ documentos 1 7 jaccard sm 0.22 jaccard directo 0.114804 error relativo 0.916308
+ documentos 1 8 jaccard sm 0.21 jaccard directo 0.0870871 error relativo 1.41136
+ documentos 1 11 jaccard sm 0.22 jaccard directo 0.0775862 error relativo 1.83553
+ documentos 1 12 jaccard sm 0.25 jaccard directo 0.10241 error relativo 1.44116
+ documentos 1 13 jaccard sm 0.21 jaccard directo 0.105919 error relativo 0.982638
+ documentos 1 14 jaccard sm 0.24 jaccard directo 0.0792683 error relativo 2.02767
+ documentos 1 16 jaccard sm 0.22 jaccard directo 0.135802 error relativo 0.619995
+ documentos 1 17 jaccard sm 0.21 jaccard directo 0.077381 error relativo 1.71382
+ documentos 1 19 jaccard sm 0.24 jaccard directo 0.0746269 error relativo 2.21597
+ documentos 2 5 jaccard sm 0.22 jaccard directo 0.151125 error relativo 0.455742
+ documentos 2 6 jaccard sm 0.22 jaccard directo 0.0952381 error relativo 1.30999
+ documentos 2 8 jaccard sm 0.24 jaccard directo 0.1375 error relativo 0.745449
+ documentos 2 10 jaccard sm 0.21 jaccard directo 0.118541 error relativo 0.771532
+ documentos 2 11 jaccard sm 0.23 jaccard directo 0.125373 error relativo 0.834517
+ documentos 2 15 jaccard sm 0.21 jaccard directo 0.110448 error relativo 0.901343
+ documentos 2 17 jaccard sm 0.21 jaccard directo 0.10303 error relativo 1.03823
+ documentos 2 19 jaccard sm 0.24 jaccard directo 0.134796 error relativo 0.780459
+ documentos 3 5 jaccard sm 0.23 jaccard directo 0.135385 error relativo 0.698858
+ documentos 3 7 jaccard sm 0.23 jaccard directo 0.168196 error relativo 0.367452
+ documentos 3 8 jaccard sm 0.21 jaccard directo 0.150307 error relativo 0.39714
+ documentos 3 9 jaccard sm 0.22 jaccard directo 0.159159 error relativo 0.382262
+ documentos 3 11 jaccard sm 0.21 jaccard directo 0.118156 error relativo 0.77731
+ documentos 3 12 jaccard sm 0.21 jaccard directo 0.0859599 error relativo 1.44298
+ documentos 3 13 jaccard sm 0.24 jaccard directo 0.132308 error relativo 0.813947
+ documentos 3 16 jaccard sm 0.24 jaccard directo 0.158055 error relativo 0.518458
+ documentos 4 7 jaccard sm 0.23 jaccard directo 0.120743 error relativo 0.904864
+ documentos 4 9 jaccard sm 0.31 jaccard directo 0.140187 error relativo 1.21132
+ documentos 4 10 jaccard sm 0.21 jaccard directo 0.0878788 error relativo 1.38964
+ documentos 4 11 jaccard sm 0.26 jaccard directo 0.135802 error relativo 0.914539
+ documentos 4 12 jaccard sm 0.3 jaccard directo 0.132492 error relativo 1.26428
+ documentos 4 14 jaccard sm 0.21 jaccard directo 0.101587 error relativo 1.06718
+ documentos 4 15 jaccard sm 0.21 jaccard directo 0.12037 error relativo 0.744609
+ documentos 4 17 jaccard sm 0.3 jaccard directo 0.156352 error relativo 0.918744
+ documentos 4 18 jaccard sm 0.22 jaccard directo 0.133758 error relativo 0.644757
+ documentos 4 19 jaccard sm 0.23 jaccard directo 0.0928793 error relativo 1.47632
+ documentos 5 7 jaccard sm 0.21 jaccard directo 0.123494 error relativo 0.700482
+ documentos 5 11 jaccard sm 0.24 jaccard directo 0.131343 error relativo 0.827266
+ documentos 5 12 jaccard sm 0.22 jaccard directo 0.111111 error relativo 0.979991
+ documentos 5 17 jaccard sm 0.23 jaccard directo 0.133127 error relativo 0.727669
+ documentos 6 10 jaccard sm 0.23 jaccard directo 0.120944 error relativo 0.9017
+ documentos 6 11 jaccard sm 0.27 jaccard directo 0.144118 error relativo 0.873463
+ documentos 6 12 jaccard sm 0.25 jaccard directo 0.120944 error relativo 1.06706
+ documentos 6 13 jaccard sm 0.22 jaccard directo 0.125 error relativo 0.759994
+ documentos 6 14 jaccard sm 0.24 jaccard directo 0.146417 error relativo 0.639145
+ documentos 6 17 jaccard sm 0.24 jaccard directo 0.129129 error relativo 0.858598
+ documentos 6 19 jaccard sm 0.22 jaccard directo 0.109792 error relativo 1.00377
+ documentos 7 8 jaccard sm 0.28 jaccard directo 0.195584 error relativo 0.431611
+ documentos 7 9 jaccard sm 0.25 jaccard directo 0.147059 error relativo 0.699995
+ documentos 7 11 jaccard sm 0.25 jaccard directo 0.123209 error relativo 1.02906
+ documentos 7 12 jaccard sm 0.23 jaccard directo 0.126471 error relativo 0.818598
+ documentos 7 14 jaccard sm 0.22 jaccard directo 0.0943953 error relativo 1.33061
+ documentos 7 16 jaccard sm 0.22 jaccard directo 0.132353 error relativo 0.662217
+ documentos 7 17 jaccard sm 0.24 jaccard directo 0.138138 error relativo 0.737386
+ documentos 7 19 jaccard sm 0.25 jaccard directo 0.138973 error relativo 0.798907
+ documentos 8 9 jaccard sm 0.23 jaccard directo 0.136499 error relativo 0.684995
+ documentos 8 11 jaccard sm 0.23 jaccard directo 0.112717 error relativo 1.0405
+ documentos 8 12 jaccard sm 0.24 jaccard directo 0.112426 error relativo 1.13473
+ documentos 8 14 jaccard sm 0.21 jaccard directo 0.0963855 error relativo 1.17874
+ documentos 8 17 jaccard sm 0.22 jaccard directo 0.113772 error relativo 0.933676
+ documentos 8 19 jaccard sm 0.24 jaccard directo 0.128049 error relativo 0.874279
+ documentos 9 10 jaccard sm 0.3 jaccard directo 0.141593 error relativo 1.11874
+ documentos 9 11 jaccard sm 0.27 jaccard directo 0.14121 error relativo 0.912034
+ documentos 9 12 jaccard sm 0.27 jaccard directo 0.112069 error relativo 1.40922
+ documentos 9 13 jaccard sm 0.23 jaccard directo 0.119048 error relativo 0.931992
+ documentos 9 14 jaccard sm 0.26 jaccard directo 0.119403 error relativo 1.17749
+ documentos 9 15 jaccard sm 0.23 jaccard directo 0.123563 error relativo 0.861388
+ documentos 9 17 jaccard sm 0.31 jaccard directo 0.146707 error relativo 1.11305
+ documentos 9 19 jaccard sm 0.23 jaccard directo 0.107558 error relativo 1.13837
+ documentos 10 11 jaccard sm 0.31 jaccard directo 0.189602 error relativo 0.634997
+ documentos 10 12 jaccard sm 0.21 jaccard directo 0.11437 error relativo 0.836147
+ documentos 10 14 jaccard sm 0.26 jaccard directo 0.105105 error relativo 1.4737
+ documentos 10 15 jaccard sm 0.22 jaccard directo 0.142857 error relativo 0.539996
+ documentos 11 12 jaccard sm 0.31 jaccard directo 0.150888 error relativo 1.0545
+ documentos 11 13 jaccard sm 0.22 jaccard directo 0.125 error relativo 0.759994
+ documentos 11 14 jaccard sm 0.27 jaccard directo 0.142424 error relativo 0.895738
+ documentos 11 15 jaccard sm 0.25 jaccard directo 0.149123 error relativo 0.676466
+ documentos 11 17 jaccard sm 0.24 jaccard directo 0.149254 error relativo 0.607996
+ documentos 11 18 jaccard sm 0.23 jaccard directo 0.122093 error relativo 0.883802
+ documentos 11 19 jaccard sm 0.22 jaccard directo 0.110145 error relativo 0.997359
+ documentos 12 13 jaccard sm 0.21 jaccard directo 0.118182 error relativo 0.776917
+ documentos 12 14 jaccard sm 0.25 jaccard directo 0.121951 error relativo 1.04999
+ documentos 12 15 jaccard sm 0.21 jaccard directo 0.103448 error relativo 1.02999
+ documentos 12 17 jaccard sm 0.29 jaccard directo 0.109145 error relativo 1.65701
+ documentos 12 18 jaccard sm 0.25 jaccard directo 0.105572 error relativo 1.36804
+ documentos 12 19 jaccard sm 0.23 jaccard directo 0.126506 error relativo 0.818089
+ documentos 13 17 jaccard sm 0.25 jaccard directo 0.13354 error relativo 0.872086
+ documentos 13 19 jaccard sm 0.22 jaccard directo 0.110092 error relativo 0.998324
+ documentos 14 15 jaccard sm 0.23 jaccard directo 0.103858 error relativo 1.21456
+ documentos 14 17 jaccard sm 0.22 jaccard directo 0.106383 error relativo 1.06799
+ documentos 14 19 jaccard sm 0.28 jaccard directo 0.134796 error relativo 1.0772
+ documentos 15 17 jaccard sm 0.25 jaccard directo 0.130952 error relativo 0.909084
+ documentos 15 19 jaccard sm 0.23 jaccard directo 0.125 error relativo 0.839993
+ documentos 16 18 jaccard sm 0.24 jaccard directo 0.121302 error relativo 0.978529
+ documentos 16 19 jaccard sm 0.21 jaccard directo 0.105882 error relativo 0.983324
+ documentos 17 18 jaccard sm 0.25 jaccard directo 0.151235 error relativo 0.653057
+ documentos 17 19 jaccard sm 0.3 jaccard directo 0.138462 error relativo 1.16666
+total elapsed 0.047 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.2
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.3
+ documentos 4 9 jaccard sm 0.31 jaccard directo 0.140187 error relativo 1.21132
+ documentos 9 17 jaccard sm 0.31 jaccard directo 0.146707 error relativo 1.11305
+ documentos 10 11 jaccard sm 0.31 jaccard directo 0.189602 error relativo 0.634997
+ documentos 11 12 jaccard sm 0.31 jaccard directo 0.150888 error relativo 1.0545
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.3
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.4
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.4
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.4
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.5
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.5
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.5
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.6
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.6
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.6
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.7
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.7
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.7
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.7
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.8
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 0.9
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 5 r 2 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 5 r 3 t 0.9
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 0.9
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 5 r 5 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 1 t 1
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 5 r 2 t 1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 5 r 3 t 1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 5 r 4 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 5 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 5 r 6 t 1
+total elapsed 0.002 seconds
+Para la k 6 la media cuadrada de los errores es: 1.10016
+Candidatos según LSH constantes k 6 r 1 t 0.1
+ documentos 0 2 jaccard sm 0.17 jaccard directo 0.0396825 error relativo 3.28392
+ documentos 0 4 jaccard sm 0.11 jaccard directo 0.0294118 error relativo 2.73991
+ documentos 0 7 jaccard sm 0.12 jaccard directo 0.0851064 error relativo 0.409995
+ documentos 0 10 jaccard sm 0.14 jaccard directo 0.0463918 error relativo 2.01773
+ documentos 0 11 jaccard sm 0.11 jaccard directo 0.0649351 error relativo 0.693989
+ documentos 0 12 jaccard sm 0.13 jaccard directo 0.0636605 error relativo 1.04207
+ documentos 1 3 jaccard sm 0.14 jaccard directo 0.0679348 error relativo 1.06078
+ documentos 1 5 jaccard sm 0.14 jaccard directo 0.0521978 error relativo 1.68207
+ documentos 1 8 jaccard sm 0.11 jaccard directo 0.0344828 error relativo 2.18994
+ documentos 1 10 jaccard sm 0.13 jaccard directo 0.0531915 error relativo 1.44397
+ documentos 1 11 jaccard sm 0.11 jaccard directo 0.0309278 error relativo 2.55658
+ documentos 1 12 jaccard sm 0.14 jaccard directo 0.0625 error relativo 1.23998
+ documentos 1 15 jaccard sm 0.13 jaccard directo 0.0557029 error relativo 1.33379
+ documentos 1 19 jaccard sm 0.11 jaccard directo 0.0265957 error relativo 3.13588
+ documentos 2 4 jaccard sm 0.12 jaccard directo 0.0298103 error relativo 3.02535
+ documentos 2 5 jaccard sm 0.11 jaccard directo 0.0777778 error relativo 0.41428
+ documentos 2 7 jaccard sm 0.12 jaccard directo 0.0494792 error relativo 1.42523
+ documentos 2 9 jaccard sm 0.11 jaccard directo 0.0465116 error relativo 1.36497
+ documentos 2 10 jaccard sm 0.13 jaccard directo 0.0580475 error relativo 1.23952
+ documentos 2 12 jaccard sm 0.14 jaccard directo 0.076087 error relativo 0.839989
+ documentos 2 13 jaccard sm 0.11 jaccard directo 0.0566038 error relativo 0.943317
+ documentos 2 16 jaccard sm 0.15 jaccard directo 0.0802139 error relativo 0.869989
+ documentos 3 5 jaccard sm 0.16 jaccard directo 0.0698925 error relativo 1.28921
+ documentos 3 8 jaccard sm 0.13 jaccard directo 0.0771277 error relativo 0.685508
+ documentos 3 10 jaccard sm 0.12 jaccard directo 0.0538462 error relativo 1.22855
+ documentos 3 11 jaccard sm 0.14 jaccard directo 0.0532995 error relativo 1.62664
+ documentos 3 13 jaccard sm 0.12 jaccard directo 0.072 error relativo 0.666657
+ documentos 3 14 jaccard sm 0.11 jaccard directo 0.0415584 error relativo 1.64684
+ documentos 3 16 jaccard sm 0.15 jaccard directo 0.0837696 error relativo 0.790616
+ documentos 4 9 jaccard sm 0.11 jaccard directo 0.0672043 error relativo 0.636791
+ documentos 4 11 jaccard sm 0.14 jaccard directo 0.0700809 error relativo 0.997678
+ documentos 4 12 jaccard sm 0.12 jaccard directo 0.0659341 error relativo 0.819988
+ documentos 4 17 jaccard sm 0.13 jaccard directo 0.0779944 error relativo 0.666777
+ documentos 4 18 jaccard sm 0.13 jaccard directo 0.0655738 error relativo 0.982485
+ documentos 5 8 jaccard sm 0.12 jaccard directo 0.0505319 error relativo 1.37471
+ documentos 5 11 jaccard sm 0.13 jaccard directo 0.0657895 error relativo 0.975985
+ documentos 5 16 jaccard sm 0.11 jaccard directo 0.071618 error relativo 0.535918
+ documentos 6 9 jaccard sm 0.12 jaccard directo 0.0559796 error relativo 1.14362
+ documentos 6 11 jaccard sm 0.12 jaccard directo 0.0613811 error relativo 0.954984
+ documentos 6 12 jaccard sm 0.12 jaccard directo 0.0545455 error relativo 1.19998
+ documentos 6 14 jaccard sm 0.17 jaccard directo 0.0721925 error relativo 1.3548
+ documentos 6 16 jaccard sm 0.11 jaccard directo 0.0697674 error relativo 0.576658
+ documentos 7 8 jaccard sm 0.19 jaccard directo 0.11413 error relativo 0.664756
+ documentos 7 10 jaccard sm 0.14 jaccard directo 0.0478589 error relativo 1.92522
+ documentos 7 11 jaccard sm 0.14 jaccard directo 0.0526316 error relativo 1.65997
+ documentos 7 13 jaccard sm 0.15 jaccard directo 0.0710526 error relativo 1.1111
+ documentos 7 17 jaccard sm 0.12 jaccard directo 0.0677083 error relativo 0.772296
+ documentos 7 19 jaccard sm 0.11 jaccard directo 0.0684211 error relativo 0.607683
+ documentos 8 11 jaccard sm 0.15 jaccard directo 0.0483461 error relativo 2.10259
+ documentos 8 19 jaccard sm 0.13 jaccard directo 0.0641711 error relativo 1.02582
+ documentos 9 10 jaccard sm 0.11 jaccard directo 0.0801034 error relativo 0.373221
+ documentos 9 11 jaccard sm 0.11 jaccard directo 0.0656566 error relativo 0.675374
+ documentos 9 12 jaccard sm 0.14 jaccard directo 0.0508906 error relativo 1.75097
+ documentos 9 16 jaccard sm 0.11 jaccard directo 0.0878553 error relativo 0.252056
+ documentos 9 18 jaccard sm 0.13 jaccard directo 0.0807292 error relativo 0.610315
+ documentos 10 11 jaccard sm 0.11 jaccard directo 0.114667 error relativo 0.0406973
+ documentos 10 12 jaccard sm 0.12 jaccard directo 0.0595855 error relativo 1.0139
+ documentos 10 13 jaccard sm 0.12 jaccard directo 0.0657895 error relativo 0.823987
+ documentos 10 17 jaccard sm 0.14 jaccard directo 0.0597403 error relativo 1.34346
+ documentos 10 18 jaccard sm 0.12 jaccard directo 0.0647668 error relativo 0.852787
+ documentos 11 12 jaccard sm 0.17 jaccard directo 0.0755208 error relativo 1.25102
+ documentos 11 14 jaccard sm 0.13 jaccard directo 0.0597403 error relativo 1.17607
+ documentos 11 15 jaccard sm 0.13 jaccard directo 0.0632911 error relativo 1.05398
+ documentos 11 16 jaccard sm 0.19 jaccard directo 0.0906736 error relativo 1.09542
+ documentos 11 18 jaccard sm 0.12 jaccard directo 0.0559796 error relativo 1.14362
+ documentos 11 19 jaccard sm 0.14 jaccard directo 0.0381679 error relativo 2.66793
+ documentos 12 16 jaccard sm 0.12 jaccard directo 0.0351759 error relativo 2.41136
+ documentos 12 18 jaccard sm 0.12 jaccard directo 0.0437018 error relativo 1.74584
+ documentos 14 18 jaccard sm 0.11 jaccard directo 0.0469974 error relativo 1.34053
+ documentos 14 19 jaccard sm 0.14 jaccard directo 0.0765027 error relativo 0.829989
+ documentos 15 19 jaccard sm 0.14 jaccard directo 0.0684211 error relativo 1.04614
+ documentos 16 18 jaccard sm 0.11 jaccard directo 0.0642674 error relativo 0.711589
+ documentos 17 18 jaccard sm 0.11 jaccard directo 0.0742706 error relativo 0.481065
+total elapsed 0.048 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.1
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.2
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.2
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.2
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.2
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.2
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.3
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.3
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.4
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.4
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.4
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.5
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.5
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.6
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.6
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.7
+total elapsed 0.011 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.7
+total elapsed 0.006 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.7
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.7
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.8
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.8
+total elapsed 0.006 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.8
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.8
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.8
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 0.9
+total elapsed 0.013 seconds
+Candidatos según LSH constantes k 6 r 2 t 0.9
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 5 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 1 t 1
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 6 r 2 t 1
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 6 r 3 t 1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 6 r 4 t 1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 6 r 5 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 6 r 6 t 1
+total elapsed 0.002 seconds
+Para la k 7 la media cuadrada de los errores es: 0.667283
+Candidatos según LSH constantes k 7 r 1 t 0.1
+total elapsed 0.013 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.1
+total elapsed 0.006 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.2
+total elapsed 0.023 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.2
+total elapsed 0.009 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.2
+total elapsed 0.006 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.2
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.3
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.3
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.3
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.4
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.4
+total elapsed 0.006 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.4
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.5
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.5
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.5
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.5
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.6
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.6
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.6
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.7
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.7
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.7
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.7
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.7
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.8
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.8
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.8
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 7 r 1 t 0.9
+total elapsed 0.01 seconds
+Candidatos según LSH constantes k 7 r 2 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 3 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 4 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 5 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 0.9
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 7 r 1 t 1
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 7 r 2 t 1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 7 r 3 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 4 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 5 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 7 r 6 t 1
+total elapsed 0.002 seconds
+Para la k 8 la media cuadrada de los errores es: 485.671
+Candidatos según LSH constantes k 8 r 1 t 0.1
+ documentos 0 2 jaccard sm 0.12 jaccard directo 0 error relativo 120000
+ documentos 0 3 jaccard sm 0.14 jaccard directo 0.00968523 error relativo 13.4536
+ documentos 0 4 jaccard sm 0.13 jaccard directo 0.00742574 error relativo 16.5044
+ documentos 0 5 jaccard sm 0.12 jaccard directo 0.002457 error relativo 47.8205
+ documentos 0 6 jaccard sm 0.28 jaccard directo 0.00478469 error relativo 57.508
+ documentos 0 7 jaccard sm 0.16 jaccard directo 0.0119904 error relativo 12.343
+ documentos 0 9 jaccard sm 0.25 jaccard directo 0.0119904 error relativo 19.8483
+ documentos 0 10 jaccard sm 0.18 jaccard directo 0.0117371 error relativo 14.3348
+ documentos 0 12 jaccard sm 0.21 jaccard directo 0.0218447 error relativo 8.61294
+ documentos 0 13 jaccard sm 0.25 jaccard directo 0.00486618 error relativo 50.3647
+ documentos 0 14 jaccard sm 0.18 jaccard directo 0.0346535 error relativo 4.19416
+ documentos 0 15 jaccard sm 0.13 jaccard directo 0 error relativo 130000
+ documentos 0 17 jaccard sm 0.13 jaccard directo 0.00485437 error relativo 25.7747
+ documentos 0 18 jaccard sm 0.14 jaccard directo 0.00721154 error relativo 18.4108
+ documentos 1 3 jaccard sm 0.12 jaccard directo 0.0170732 error relativo 6.02822
+ documentos 1 4 jaccard sm 0.14 jaccard directo 0 error relativo 140000
+ documentos 1 5 jaccard sm 0.14 jaccard directo 0.0149254 error relativo 8.37944
+ documentos 1 6 jaccard sm 0.13 jaccard directo 0.00719424 error relativo 17.0676
+ documentos 1 7 jaccard sm 0.25 jaccard directo 0.0217918 error relativo 10.4717
+ documentos 1 8 jaccard sm 0.18 jaccard directo 0 error relativo 180000
+ documentos 1 10 jaccard sm 0.2 jaccard directo 0.0189125 error relativo 9.57449
+ documentos 1 11 jaccard sm 0.18 jaccard directo 0.0023753 error relativo 74.7485
+ documentos 1 12 jaccard sm 0.13 jaccard directo 0.0318627 error relativo 3.0799
+ documentos 1 13 jaccard sm 0.12 jaccard directo 0.00242718 error relativo 48.4201
+ documentos 1 14 jaccard sm 0.22 jaccard directo 0.00480769 error relativo 44.7507
+ documentos 1 15 jaccard sm 0.13 jaccard directo 0.00952381 error relativo 12.6487
+ documentos 1 16 jaccard sm 0.22 jaccard directo 0.00470588 error relativo 45.7403
+ documentos 1 18 jaccard sm 0.11 jaccard directo 0.00239234 error relativo 44.9612
+ documentos 1 19 jaccard sm 0.15 jaccard directo 0 error relativo 150000
+ documentos 2 4 jaccard sm 0.17 jaccard directo 0 error relativo 170000
+ documentos 2 5 jaccard sm 0.16 jaccard directo 0.0296296 error relativo 4.39985
+ documentos 2 6 jaccard sm 0.12 jaccard directo 0.0117925 error relativo 9.17522
+ documentos 2 7 jaccard sm 0.17 jaccard directo 0.0117371 error relativo 13.4829
+ documentos 2 8 jaccard sm 0.18 jaccard directo 0.0239808 error relativo 6.50573
+ documentos 2 9 jaccard sm 0.21 jaccard directo 0.00936768 error relativo 21.4152
+ documentos 2 10 jaccard sm 0.13 jaccard directo 0.00917431 error relativo 13.1686
+ documentos 2 11 jaccard sm 0.17 jaccard directo 0.004662 error relativo 35.4574
+ documentos 2 12 jaccard sm 0.29 jaccard directo 0.0213777 error relativo 12.565
+ documentos 2 14 jaccard sm 0.16 jaccard directo 0.00707547 error relativo 21.6103
+ documentos 2 15 jaccard sm 0.23 jaccard directo 0.0140515 error relativo 15.3672
+ documentos 2 16 jaccard sm 0.18 jaccard directo 0.0356295 error relativo 4.05189
+ documentos 2 17 jaccard sm 0.19 jaccard directo 0 error relativo 190000
+ documentos 2 19 jaccard sm 0.2 jaccard directo 0.0320197 error relativo 5.24599
+ documentos 3 6 jaccard sm 0.14 jaccard directo 0.00468384 error relativo 28.8838
+ documentos 3 7 jaccard sm 0.17 jaccard directo 0.0360577 error relativo 3.71456
+ documentos 3 8 jaccard sm 0.18 jaccard directo 0.00945626 error relativo 18.0331
+ documentos 3 9 jaccard sm 0.16 jaccard directo 0.0117371 error relativo 12.6309
+ documentos 3 10 jaccard sm 0.13 jaccard directo 0.0138249 error relativo 8.40273
+ documentos 3 12 jaccard sm 0.11 jaccard directo 0.002331 error relativo 46.1702
+ documentos 3 13 jaccard sm 0.34 jaccard directo 0.0217918 error relativo 14.6016
+ documentos 3 16 jaccard sm 0.18 jaccard directo 0.0234742 error relativo 6.66772
+ documentos 3 18 jaccard sm 0.19 jaccard directo 0.0166271 error relativo 10.4265
+ documentos 3 19 jaccard sm 0.12 jaccard directo 0 error relativo 120000
+ documentos 4 7 jaccard sm 0.17 jaccard directo 0.0144578 error relativo 10.7576
+ documentos 4 9 jaccard sm 0.21 jaccard directo 0.0193705 error relativo 9.84074
+ documentos 4 10 jaccard sm 0.19 jaccard directo 0.00938967 error relativo 19.233
+ documentos 4 11 jaccard sm 0.17 jaccard directo 0.0268293 error relativo 5.33616
+ documentos 4 12 jaccard sm 0.14 jaccard directo 0.0194175 error relativo 6.20968
+ documentos 4 14 jaccard sm 0.35 jaccard directo 0.0121359 error relativo 27.8377
+ documentos 4 15 jaccard sm 0.14 jaccard directo 0.0143885 error relativo 8.72939
+ documentos 4 16 jaccard sm 0.13 jaccard directo 0.0118765 error relativo 9.94516
+ documentos 4 17 jaccard sm 0.23 jaccard directo 0.0222772 error relativo 9.32403
+ documentos 4 18 jaccard sm 0.16 jaccard directo 0.0145631 error relativo 9.98598
+ documentos 5 7 jaccard sm 0.14 jaccard directo 0.0047619 error relativo 28.394
+ documentos 5 9 jaccard sm 0.11 jaccard directo 0.0071599 error relativo 14.3613
+ documentos 5 10 jaccard sm 0.2 jaccard directo 0.00936768 error relativo 20.3478
+ documentos 5 11 jaccard sm 0.11 jaccard directo 0.0119904 error relativo 8.17332
+ documentos 5 12 jaccard sm 0.22 jaccard directo 0 error relativo 220000
+ documentos 5 13 jaccard sm 0.11 jaccard directo 0.0122549 error relativo 7.97535
+ documentos 5 14 jaccard sm 0.12 jaccard directo 0 error relativo 120000
+ documentos 5 15 jaccard sm 0.29 jaccard directo 0 error relativo 290000
+ documentos 5 16 jaccard sm 0.12 jaccard directo 0.0190931 error relativo 5.28472
+ documentos 5 18 jaccard sm 0.17 jaccard directo 0.0194647 error relativo 7.73335
+ documentos 5 19 jaccard sm 0.22 jaccard directo 0.00490196 error relativo 43.8711
+ documentos 6 8 jaccard sm 0.11 jaccard directo 0.0141509 error relativo 6.77285
+ documentos 6 9 jaccard sm 0.13 jaccard directo 0.0140187 error relativo 8.27274
+ documentos 6 10 jaccard sm 0.11 jaccard directo 0.01373 error relativo 7.01116
+ documentos 6 11 jaccard sm 0.23 jaccard directo 0.00930233 error relativo 23.7224
+ documentos 6 12 jaccard sm 0.11 jaccard directo 0.0164319 error relativo 5.69394
+ documentos 6 13 jaccard sm 0.26 jaccard directo 0.0119048 error relativo 20.8382
+ documentos 6 14 jaccard sm 0.14 jaccard directo 0.0189573 error relativo 6.38466
+ documentos 6 16 jaccard sm 0.21 jaccard directo 0.0091954 error relativo 21.8351
+ documentos 6 17 jaccard sm 0.15 jaccard directo 0.00947867 error relativo 14.8234
+ documentos 6 19 jaccard sm 0.15 jaccard directo 0.00956938 error relativo 14.6735
+ documentos 7 8 jaccard sm 0.11 jaccard directo 0.0384615 error relativo 1.85995
+ documentos 7 9 jaccard sm 0.13 jaccard directo 0.0283019 error relativo 3.59321
+ documentos 7 10 jaccard sm 0.16 jaccard directo 0.00678733 error relativo 22.57
+ documentos 7 12 jaccard sm 0.26 jaccard directo 0.00928074 error relativo 27.0121
+ documentos 7 14 jaccard sm 0.24 jaccard directo 0.00934579 error relativo 24.6774
+ documentos 7 15 jaccard sm 0.14 jaccard directo 0 error relativo 140000
+ documentos 7 16 jaccard sm 0.15 jaccard directo 0.016129 error relativo 8.29949
+ documentos 7 17 jaccard sm 0.19 jaccard directo 0.0118203 error relativo 15.0727
+ documentos 7 18 jaccard sm 0.25 jaccard directo 0.0116822 error relativo 20.3983
+ documentos 7 19 jaccard sm 0.11 jaccard directo 0.00236407 error relativo 45.5107
+ documentos 8 11 jaccard sm 0.14 jaccard directo 0.00465116 error relativo 29.0937
+ documentos 8 13 jaccard sm 0.17 jaccard directo 0.00714286 error relativo 22.7968
+ documentos 8 14 jaccard sm 0.12 jaccard directo 0.0214797 error relativo 4.58645
+ documentos 8 15 jaccard sm 0.21 jaccard directo 0.00462963 error relativo 44.3504
+ documentos 8 16 jaccard sm 0.18 jaccard directo 0.0045977 error relativo 38.1417
+ documentos 8 18 jaccard sm 0.11 jaccard directo 0 error relativo 110000
+ documentos 8 19 jaccard sm 0.26 jaccard directo 0.00961538 error relativo 26.0373
+ documentos 9 10 jaccard sm 0.13 jaccard directo 0.0206422 error relativo 5.29752
+ documentos 9 12 jaccard sm 0.14 jaccard directo 0.00461894 error relativo 29.3037
+ documentos 9 13 jaccard sm 0.15 jaccard directo 0.0190931 error relativo 6.85589
+ documentos 9 14 jaccard sm 0.2 jaccard directo 0.0164706 error relativo 11.1422
+ documentos 9 15 jaccard sm 0.11 jaccard directo 0.0115473 error relativo 8.52526
+ documentos 9 16 jaccard sm 0.23 jaccard directo 0.0232019 error relativo 8.91262
+ documentos 9 17 jaccard sm 0.14 jaccard directo 0.0338164 error relativo 3.13991
+ documentos 9 18 jaccard sm 0.16 jaccard directo 0.0383693 error relativo 3.16992
+ documentos 9 19 jaccard sm 0.13 jaccard directo 0 error relativo 130000
+ documentos 10 11 jaccard sm 0.12 jaccard directo 0.037296 error relativo 2.21744
+ documentos 10 12 jaccard sm 0.17 jaccard directo 0.0183486 error relativo 8.26455
+ documentos 10 14 jaccard sm 0.15 jaccard directo 0.0184758 error relativo 7.11836
+ documentos 10 15 jaccard sm 0.19 jaccard directo 0.0205479 error relativo 8.24627
+ documentos 10 16 jaccard sm 0.19 jaccard directo 0.0321101 error relativo 4.91699
+ documentos 10 17 jaccard sm 0.21 jaccard directo 0.021028 error relativo 8.98624
+ documentos 10 18 jaccard sm 0.18 jaccard directo 0.0184332 error relativo 8.76452
+ documentos 10 19 jaccard sm 0.11 jaccard directo 0.00231481 error relativo 46.4999
+ documentos 11 12 jaccard sm 0.11 jaccard directo 0.0187354 error relativo 4.87099
+ documentos 11 13 jaccard sm 0.11 jaccard directo 0.0142518 error relativo 6.71786
+ documentos 11 14 jaccard sm 0.13 jaccard directo 0.00934579 error relativo 12.9086
+ documentos 11 15 jaccard sm 0.12 jaccard directo 0.00921659 error relativo 12.0187
+ documentos 11 16 jaccard sm 0.18 jaccard directo 0.0255814 error relativo 6.03613
+ documentos 11 17 jaccard sm 0.11 jaccard directo 0.0166271 error relativo 5.61538
+ documentos 11 18 jaccard sm 0.15 jaccard directo 0.0116822 error relativo 11.839
+ documentos 11 19 jaccard sm 0.17 jaccard directo 0 error relativo 170000
+ documentos 12 14 jaccard sm 0.16 jaccard directo 0.00936768 error relativo 16.0783
+ documentos 12 15 jaccard sm 0.14 jaccard directo 0.00691244 error relativo 19.2505
+ documentos 12 16 jaccard sm 0.13 jaccard directo 0 error relativo 130000
+ documentos 12 17 jaccard sm 0.16 jaccard directo 0.00707547 error relativo 21.6103
+ documentos 12 18 jaccard sm 0.15 jaccard directo 0.00699301 error relativo 20.4471
+ documentos 12 19 jaccard sm 0.19 jaccard directo 0.0168269 error relativo 10.2908
+ documentos 13 14 jaccard sm 0.12 jaccard directo 0.00236967 error relativo 49.6191
+ documentos 13 16 jaccard sm 0.16 jaccard directo 0.0164706 error relativo 8.71376
+ documentos 13 18 jaccard sm 0.14 jaccard directo 0.00236407 error relativo 58.1954
+ documentos 13 19 jaccard sm 0.14 jaccard directo 0.00241546 error relativo 56.9364
+ documentos 14 15 jaccard sm 0.12 jaccard directo 0.00462963 error relativo 24.9146
+ documentos 14 16 jaccard sm 0.13 jaccard directo 0.00691244 error relativo 17.8041
+ documentos 14 17 jaccard sm 0.2 jaccard directo 0.0119332 error relativo 15.7587
+ documentos 14 18 jaccard sm 0.11 jaccard directo 0.0117925 error relativo 8.32729
+ documentos 14 19 jaccard sm 0.18 jaccard directo 0.0243902 error relativo 6.37974
+ documentos 15 17 jaccard sm 0.11 jaccard directo 0.00938967 error relativo 10.7139
+ documentos 15 18 jaccard sm 0.17 jaccard directo 0.013986 error relativo 11.1542
+ documentos 15 19 jaccard sm 0.15 jaccard directo 0.0118765 error relativo 11.629
+ documentos 16 17 jaccard sm 0.12 jaccard directo 0.00697674 error relativo 16.1977
+ documentos 16 18 jaccard sm 0.12 jaccard directo 0.0115473 error relativo 9.39119
+ documentos 16 19 jaccard sm 0.17 jaccard directo 0.00704225 error relativo 23.1367
+ documentos 17 19 jaccard sm 0.11 jaccard directo 0.00483092 error relativo 21.7655
+total elapsed 0.064 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.1
+ documentos 2 12 jaccard sm 0.29 jaccard directo 0.0213777 error relativo 12.565
+ documentos 3 13 jaccard sm 0.34 jaccard directo 0.0217918 error relativo 14.6016
+ documentos 4 14 jaccard sm 0.35 jaccard directo 0.0121359 error relativo 27.8377
+total elapsed 0.005 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.1
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.2
+ documentos 0 6 jaccard sm 0.28 jaccard directo 0.00478469 error relativo 57.508
+ documentos 0 9 jaccard sm 0.25 jaccard directo 0.0119904 error relativo 19.8483
+ documentos 0 12 jaccard sm 0.21 jaccard directo 0.0218447 error relativo 8.61294
+ documentos 0 13 jaccard sm 0.25 jaccard directo 0.00486618 error relativo 50.3647
+ documentos 1 7 jaccard sm 0.25 jaccard directo 0.0217918 error relativo 10.4717
+ documentos 1 14 jaccard sm 0.22 jaccard directo 0.00480769 error relativo 44.7507
+ documentos 1 16 jaccard sm 0.22 jaccard directo 0.00470588 error relativo 45.7403
+ documentos 2 9 jaccard sm 0.21 jaccard directo 0.00936768 error relativo 21.4152
+ documentos 2 12 jaccard sm 0.29 jaccard directo 0.0213777 error relativo 12.565
+ documentos 2 15 jaccard sm 0.23 jaccard directo 0.0140515 error relativo 15.3672
+ documentos 3 13 jaccard sm 0.34 jaccard directo 0.0217918 error relativo 14.6016
+ documentos 4 9 jaccard sm 0.21 jaccard directo 0.0193705 error relativo 9.84074
+ documentos 4 14 jaccard sm 0.35 jaccard directo 0.0121359 error relativo 27.8377
+ documentos 4 17 jaccard sm 0.23 jaccard directo 0.0222772 error relativo 9.32403
+ documentos 5 12 jaccard sm 0.22 jaccard directo 0 error relativo 220000
+ documentos 5 15 jaccard sm 0.29 jaccard directo 0 error relativo 290000
+ documentos 5 19 jaccard sm 0.22 jaccard directo 0.00490196 error relativo 43.8711
+ documentos 6 11 jaccard sm 0.23 jaccard directo 0.00930233 error relativo 23.7224
+ documentos 6 13 jaccard sm 0.26 jaccard directo 0.0119048 error relativo 20.8382
+ documentos 6 16 jaccard sm 0.21 jaccard directo 0.0091954 error relativo 21.8351
+ documentos 7 12 jaccard sm 0.26 jaccard directo 0.00928074 error relativo 27.0121
+ documentos 7 14 jaccard sm 0.24 jaccard directo 0.00934579 error relativo 24.6774
+ documentos 7 18 jaccard sm 0.25 jaccard directo 0.0116822 error relativo 20.3983
+ documentos 8 15 jaccard sm 0.21 jaccard directo 0.00462963 error relativo 44.3504
+ documentos 8 19 jaccard sm 0.26 jaccard directo 0.00961538 error relativo 26.0373
+ documentos 9 16 jaccard sm 0.23 jaccard directo 0.0232019 error relativo 8.91262
+ documentos 10 17 jaccard sm 0.21 jaccard directo 0.021028 error relativo 8.98624
+total elapsed 0.02 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.2
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.3
+ documentos 3 13 jaccard sm 0.34 jaccard directo 0.0217918 error relativo 14.6016
+ documentos 4 14 jaccard sm 0.35 jaccard directo 0.0121359 error relativo 27.8377
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.3
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.4
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.4
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.5
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.6
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.6
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.7
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.7
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.8
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.8
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.8
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 8 r 1 t 0.9
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 0.9
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 8 r 3 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 1 t 1
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 8 r 2 t 1
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 8 r 3 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 4 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 5 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 8 r 6 t 1
+total elapsed 0.002 seconds
+Para la k 9 la media cuadrada de los errores es: 562.468
+Candidatos según LSH constantes k 9 r 1 t 0.1
+ documentos 0 4 jaccard sm 0.15 jaccard directo 0.00244499 error relativo 60.3253
+ documentos 0 7 jaccard sm 0.13 jaccard directo 0.0047619 error relativo 26.2945
+ documentos 0 8 jaccard sm 0.11 jaccard directo 0.0145631 error relativo 6.55288
+ documentos 0 10 jaccard sm 0.12 jaccard directo 0.00934579 error relativo 11.8387
+ documentos 0 11 jaccard sm 0.11 jaccard directo 0 error relativo 110000
+ documentos 0 12 jaccard sm 0.14 jaccard directo 0.0144231 error relativo 8.70606
+ documentos 0 14 jaccard sm 0.13 jaccard directo 0.0268949 error relativo 3.83349
+ documentos 0 16 jaccard sm 0.17 jaccard directo 0.00235294 error relativo 71.2197
+ documentos 1 4 jaccard sm 0.14 jaccard directo 0 error relativo 140000
+ documentos 1 5 jaccard sm 0.13 jaccard directo 0.00487805 error relativo 25.6447
+ documentos 1 8 jaccard sm 0.15 jaccard directo 0 error relativo 150000
+ documentos 1 9 jaccard sm 0.12 jaccard directo 0.00473934 error relativo 24.3149
+ documentos 1 12 jaccard sm 0.16 jaccard directo 0.0240964 error relativo 5.63977
+ documentos 1 13 jaccard sm 0.13 jaccard directo 0 error relativo 130000
+ documentos 1 16 jaccard sm 0.12 jaccard directo 0.00233645 error relativo 50.3385
+ documentos 1 17 jaccard sm 0.17 jaccard directo 0 error relativo 170000
+ documentos 2 5 jaccard sm 0.12 jaccard directo 0.0194647 error relativo 5.16473
+ documentos 2 6 jaccard sm 0.2 jaccard directo 0.00938967 error relativo 20.2978
+ documentos 2 9 jaccard sm 0.11 jaccard directo 0.00700935 error relativo 14.6912
+ documentos 2 10 jaccard sm 0.16 jaccard directo 0 error relativo 160000
+ documentos 2 14 jaccard sm 0.19 jaccard directo 0.002331 error relativo 80.4755
+ documentos 2 18 jaccard sm 0.23 jaccard directo 0.0046729 error relativo 48.2097
+ documentos 2 19 jaccard sm 0.11 jaccard directo 0.0219512 error relativo 4.01093
+ documentos 3 7 jaccard sm 0.2 jaccard directo 0.0238095 error relativo 7.39969
+ documentos 3 11 jaccard sm 0.16 jaccard directo 0 error relativo 160000
+ documentos 3 15 jaccard sm 0.23 jaccard directo 0.00699301 error relativo 31.8854
+ documentos 3 19 jaccard sm 0.14 jaccard directo 0 error relativo 140000
+ documentos 4 8 jaccard sm 0.21 jaccard directo 0 error relativo 210000
+ documentos 4 10 jaccard sm 0.12 jaccard directo 0.00696056 error relativo 16.2377
+ documentos 4 11 jaccard sm 0.13 jaccard directo 0.0168269 error relativo 6.72531
+ documentos 4 12 jaccard sm 0.24 jaccard directo 0.0119332 error relativo 19.1104
+ documentos 4 16 jaccard sm 0.25 jaccard directo 0.00705882 error relativo 34.4118
+ documentos 5 9 jaccard sm 0.23 jaccard directo 0.0023753 error relativo 95.7897
+ documentos 5 13 jaccard sm 0.23 jaccard directo 0.00242131 error relativo 93.9512
+ documentos 5 17 jaccard sm 0.16 jaccard directo 0.0171149 error relativo 8.34808
+ documentos 6 10 jaccard sm 0.23 jaccard directo 0.00680272 error relativo 32.8052
+ documentos 6 14 jaccard sm 0.19 jaccard directo 0.00699301 error relativo 26.1663
+ documentos 6 18 jaccard sm 0.19 jaccard directo 0.00232019 error relativo 80.8552
+ documentos 6 19 jaccard sm 0.11 jaccard directo 0.00477327 error relativo 22.0404
+ documentos 7 11 jaccard sm 0.22 jaccard directo 0 error relativo 220000
+ documentos 7 15 jaccard sm 0.19 jaccard directo 0 error relativo 190000
+ documentos 7 19 jaccard sm 0.11 jaccard directo 0 error relativo 110000
+ documentos 8 11 jaccard sm 0.11 jaccard directo 0 error relativo 110000
+ documentos 8 12 jaccard sm 0.23 jaccard directo 0.00934579 error relativo 23.6075
+ documentos 8 16 jaccard sm 0.19 jaccard directo 0 error relativo 190000
+ documentos 9 13 jaccard sm 0.21 jaccard directo 0.0118765 error relativo 16.6806
+ documentos 9 17 jaccard sm 0.16 jaccard directo 0.0288462 error relativo 4.54651
+ documentos 9 18 jaccard sm 0.11 jaccard directo 0.0260664 error relativo 3.21988
+ documentos 10 13 jaccard sm 0.11 jaccard directo 0.0139211 error relativo 6.90117
+ documentos 10 14 jaccard sm 0.22 jaccard directo 0.0113895 error relativo 18.3144
+ documentos 10 16 jaccard sm 0.11 jaccard directo 0.0204082 error relativo 4.38978
+ documentos 10 18 jaccard sm 0.16 jaccard directo 0.0113895 error relativo 13.0469
+ documentos 11 12 jaccard sm 0.11 jaccard directo 0.0116279 error relativo 8.45927
+ documentos 11 15 jaccard sm 0.18 jaccard directo 0.0045977 error relativo 38.1417
+ documentos 11 16 jaccard sm 0.15 jaccard directo 0.0162037 error relativo 8.25663
+ documentos 11 19 jaccard sm 0.11 jaccard directo 0 error relativo 110000
+ documentos 12 16 jaccard sm 0.21 jaccard directo 0 error relativo 210000
+ documentos 13 17 jaccard sm 0.17 jaccard directo 0.0144928 error relativo 10.7293
+ documentos 14 18 jaccard sm 0.16 jaccard directo 0.00465116 error relativo 33.3928
+ documentos 15 19 jaccard sm 0.14 jaccard directo 0.00472813 error relativo 28.604
+total elapsed 0.032 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.1
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.2
+ documentos 2 18 jaccard sm 0.23 jaccard directo 0.0046729 error relativo 48.2097
+ documentos 3 15 jaccard sm 0.23 jaccard directo 0.00699301 error relativo 31.8854
+ documentos 4 8 jaccard sm 0.21 jaccard directo 0 error relativo 210000
+ documentos 4 12 jaccard sm 0.24 jaccard directo 0.0119332 error relativo 19.1104
+ documentos 4 16 jaccard sm 0.25 jaccard directo 0.00705882 error relativo 34.4118
+ documentos 5 9 jaccard sm 0.23 jaccard directo 0.0023753 error relativo 95.7897
+ documentos 5 13 jaccard sm 0.23 jaccard directo 0.00242131 error relativo 93.9512
+ documentos 6 10 jaccard sm 0.23 jaccard directo 0.00680272 error relativo 32.8052
+ documentos 7 11 jaccard sm 0.22 jaccard directo 0 error relativo 220000
+ documentos 8 12 jaccard sm 0.23 jaccard directo 0.00934579 error relativo 23.6075
+ documentos 9 13 jaccard sm 0.21 jaccard directo 0.0118765 error relativo 16.6806
+ documentos 10 14 jaccard sm 0.22 jaccard directo 0.0113895 error relativo 18.3144
+ documentos 12 16 jaccard sm 0.21 jaccard directo 0 error relativo 210000
+total elapsed 0.012 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.2
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.2
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.2
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.2
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.3
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.3
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.3
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.3
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.4
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.4
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.4
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.4
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.5
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.5
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.5
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.5
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.6
+total elapsed 0.008 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.6
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.6
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.6
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.7
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.7
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.7
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.7
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.8
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.8
+total elapsed 0.004 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.8
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.8
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.8
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 1 t 0.9
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 0.9
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 0.9
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 0.9
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 0.9
+total elapsed 0.001 seconds
+Candidatos según LSH constantes k 9 r 1 t 1
+total elapsed 0.007 seconds
+Candidatos según LSH constantes k 9 r 2 t 1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 3 t 1
+total elapsed 0.003 seconds
+Candidatos según LSH constantes k 9 r 4 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 5 t 1
+total elapsed 0.002 seconds
+Candidatos según LSH constantes k 9 r 6 t 1
+total elapsed 0.001 seconds
