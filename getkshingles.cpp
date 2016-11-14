@@ -345,7 +345,7 @@ int main(void) {
 		for (string s : textos){
 			cks.push_back(get_k_shingles_from_string(k, s));
 		}
-		clock_t start_vector_of_hash_function_for_vectors = clock();
+		
 		time_start = clock();
 		signature_matrix sm = compute_signature_matrix(cks, vh);
 		time_end = clock();
