@@ -408,7 +408,7 @@ vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_has
 	vector_of_hash_functions vh = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
-		vh.push_back(get_hash_function(rand(),rand(),get_prime(lower_bound+rand())));
+		vh.push_back(get_hash_function(rand(),rand(),get_prime(lower_bound/*+rand()*/)));
 	}
 	return vh;	
 }
@@ -416,7 +416,7 @@ vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(cons
 	vector_of_hash_function_for_vectors vf = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
-		vf.push_back(get_hash_function_for_vectors(rand(),rand(),get_prime(lower_bound+rand())));
+		vf.push_back(get_hash_function_for_vectors(rand(),rand(),get_prime(lower_bound/*+rand()*/)));
 	}
 	return vf;	
 }
