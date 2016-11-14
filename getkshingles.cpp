@@ -349,7 +349,7 @@ int main(void) {
 		time_start = clock();
 		signature_matrix sm = compute_signature_matrix(cks, vh);
 		time_end = clock();
-		if(debug_time) cout << "csm	" << k << << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
+		if(debug_time) cout << "csm	" << k << 0 << "	" << 0 << "	" << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
 		
 		//if(debug) cout << "Para la k " << k << " la media cuadrada de los errores es: " << test(cks, sm) << endl;
 		//fin de los calculos que solo dependen de k y number_of_hash_functions
