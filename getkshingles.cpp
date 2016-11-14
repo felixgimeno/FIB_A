@@ -15,6 +15,7 @@
 #include <fstream>
 #include <iomanip>
 #include <thread>
+#include <time.h>  
 using namespace std;
 
 typedef set<string> k_shingles; //set de ksingles
@@ -321,21 +322,29 @@ int main(void) {
      reading_documents();
 	
 	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
+	clock_t start_vector_of_hash_functions = clock();
 	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions);
-	//ahora creamos las funciones que hashearan las bandas del LSH
-	vector_of_hash_function_for_vectors vf = get_vector_of_hash_function_for_vectors(number_of_vector_of_hash_function_for_vectors);
+	clock_t end_vector_of_hash_functions = clock();
+	if (debug_time){cout << "time to compute vector_of_hash_functions "  << ((double)(end_vector_of_hash_functions - start_vector_of_hash_functions))/CLOCKS_PER_SEC << endl;}
 	
+	
+	//ahora creamos las funciones que hashearan las bandas del LSH
+	clock_t start_vector_of_hash_function_for_vectors = clock();
+	vector_of_hash_function_for_vectors vf = get_vector_of_hash_function_for_vectors(number_of_vector_of_hash_function_for_vectors);
+	clock_t end_vector_of_hash_function_for_vectors = clock();
+	if (debug_time){cout << "time to compute start_vector_of_hash_function_for_vectors "  << ((double)(end_vector_of_hash_function_for_vectors - start_vector_of_hash_function_for_vectors))/CLOCKS_PER_SEC << endl;}
+    
     for (size_t k = 5; k < 10; ++k){
 		//ahora hacemos los calculos que solo dependen de k y number_of_hash_functions
 		collection_of_k_shingles cks;
 		for (string s : textos){
 			cks.push_back(get_k_shingles_from_string(k, s));
 		}
+		clock_t start_vector_of_hash_function_for_vectors = clock();
 		signature_matrix sm = compute_signature_matrix(cks, vh);
 		
 		cout << "Para la k " << k << " la media cuadrada de los errores es: " << test(cks, sm) << endl;
 		//fin de los calculos que solo dependen de k y number_of_hash_functions
-		
 		const bool experimento_lsh = true;
 		if (experimento_lsh){		
 		for (float t : t_values) {
@@ -356,6 +365,8 @@ int main(void) {
 				}
 				time_end = clock();
 				cout << "total elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
+			  
+
 			  }
 		   }
 		}
