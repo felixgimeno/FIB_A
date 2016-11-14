@@ -1,30 +1,21 @@
 #include <functional>
-#include <algorithm>
-#include <iostream>
-#include <limits>
-#include <string>
-#include <random>
-#include <vector>
+#include <algorithm> 
+#include <iostream> 
+#include <limits> 
+#include <string> 
+#include <random> 
+#include <vector> 
 #include <set>
-#include <map>
-#include <string>
-#include <sstream> 
+#include <map> 
+#include <sstream>
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctime>
-#include <fstream>
-#include <iomanip>
-#include <thread>
+#include <stdlib.h> 
+#include <ctime> 
+#include <fstream> 
+#include <iomanip> 
+#include <thread> 
 #include <time.h> 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <stdlib.h>
-#include <time.h>
-#include <algorithm>
-#include <string>
-#include <sstream> 
-#include <stdio.h>
+#include <fstream> 
 using namespace std;
 
 typedef set<string> k_shingles; //set de ksingles
@@ -42,7 +33,7 @@ vector<string> textos;
 const int debug = 0; // jaccard results without times
 const int debug_time = 1; // only times and similarty values
 const int generation = true; // generations of documents
-const int ndocs = 50; // number of documents
+const int ndocs = 20; // number of documents
 const int nwords = 50; //number of word/documents
 
 
@@ -68,9 +59,9 @@ void generating_docs() {
 		avglen += vlength[i];
 	}
 	cout << "longitud media de las palabras: " << (avglen/vlength.size()) << endl;
-	//calculando las 20 permutaciones randoms, tomando como base 50words
-	//cada vector vec_s, repsentanda el contenido de un archivo , habra
-	// 20 txt's totales.
+	//calculando las permutaciones randoms, tomando como base BBDD
+	//cada vector repsentanda el contenido de un archivo , habra
+	//ndocs txt's totales.
 	
 	cout << "Numero de documentos generados: " << ndocs << endl;
 	cout << "Numero de palabras por documentos generados: " << nwords << endl;
@@ -80,10 +71,8 @@ void generating_docs() {
 	    stream << i; 
         palabra = stream.str();
 		palabra +=".txt";
-		
 		ofstream outfile;
 		outfile.open(palabra.c_str());
-		
 		for (int k = 0; k < nwords; ++k) {
 				int num=rand()%nwords;
 				string s = vwords[num];
@@ -91,11 +80,6 @@ void generating_docs() {
 			}
 		outfile.close();
 		}
-	
-	
-	
-	
-	
 	}
 
 
@@ -488,8 +472,6 @@ int main(void) {
 				}
 				time_end = clock();
 				if(debug) cout << "total elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
-			  
-
 			  }
 		   }
 		}
