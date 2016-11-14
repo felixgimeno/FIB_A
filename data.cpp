@@ -10,15 +10,15 @@
 using namespace std;
 
 
+int ndocs = 20; // numero de documentos
+int nwords = 50; //numero de palabras por documentos
 
 int main() {
 	srand(time(NULL));
-	int nwords = 50;
-	
 	vector<string> vwords;
 	vector<int> vlength;
 	ifstream file;
-	file.open("500words_avglong3.txt");
+	file.open("50words.txt");
 	
 	if (file.is_open()) {
 	string s;
@@ -31,7 +31,7 @@ int main() {
 	}
 	file.close();
 	float avglen = 0;
-	for(int i=0; i<vlength.size(); ++i){
+	for(int i=0; i<int(vlength.size()); ++i){
 		avglen += vlength[i];
 	}
 	cout << "longitud media de las palabras: " << (avglen/vlength.size()) << endl;
@@ -39,8 +39,9 @@ int main() {
 	//cada vector vec_s, repsentanda el contenido de un archivo , habra
 	// 20 txt's totales.
 	
-	cout << "calculando 20 permutaciones aleatorias" << endl;
-	for(int i = 1; i <= 20; ++i) {
+	cout << "Numero de documentos generados: " << ndocs << endl;
+	cout << "Numero de palabras por documentos generados: " << nwords << endl;
+	for(int i = 1; i <= ndocs; ++i) {
 	    stringstream stream; 
         string palabra; 
 	    stream << i; 
