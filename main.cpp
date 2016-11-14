@@ -376,11 +376,24 @@ size_t get_prime(const size_t lower_bound){
 			}
 		return res2*a%c; };
 	const vector<size_t> list = {2, 3, 5, 7, 11, 13, 17};
-	auto atomic_test = [](size_t a, size_t n, size_t d, size_t two_to_r)->bool{return true;};//----
-	auto mytest = [&list](size_t a) -> bool {
-		//----
+	auto atomic_test = [&pow](size_t a, size_t n, size_t d, size_t two_to_r)->bool{
+		const size_t res = pow(a,d,n);
+		if ( res == 1 ){return true;}
+		if ((pow(res, two_to_r,n)+1)%n == 0){return true;}
+		return false;
+		};
+	auto mytest = [&list,&atomic_test](size_t n) -> bool {
+		const size_t m = n-1;
+		size_t d = m;
+		size_t two_to_r = 1;
+		while (d % 2 == 0) {
+			d = d/2;
+			two_to_r *= 2;
+			} 
 		for(size_t v : list){
-			//----
+			if (not(atomic_test(v,n,d,two_to_r))){
+				return false;
+				}
 			}
 		return true;
 		};
@@ -395,7 +408,7 @@ vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_has
 	vector_of_hash_functions vh = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
-		vh.push_back(get_hash_function(rand(),rand(),get_prime(lower_bound)));
+		vh.push_back(get_hash_function(rand(),rand(),get_prime(lower_bound+rand())));
 	}
 	return vh;	
 }
@@ -403,7 +416,7 @@ vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(cons
 	vector_of_hash_function_for_vectors vf = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
-		vf.push_back(get_hash_function_for_vectors(rand(),rand(),get_prime(lower_bound)));
+		vf.push_back(get_hash_function_for_vectors(rand(),rand(),get_prime(lower_bound+rand())));
 	}
 	return vf;	
 }
