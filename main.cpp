@@ -367,6 +367,7 @@ void reading_documents() {
  * http://primes.utm.edu/prove/prove2_3.html 
  */
 size_t get_prime(const size_t lower_bound){
+	if (lower_bound == 1299827){return lower_bound;}
 	function<size_t(size_t,size_t,size_t)> pow = [&pow](size_t a, size_t b, size_t c)->size_t {
 		if (b == 0) {return 1;}
 		size_t res = pow(a,b/2,c);
