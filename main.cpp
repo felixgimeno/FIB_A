@@ -37,11 +37,8 @@ typedef vector< hash_function > vector_of_hash_functions;
 typedef vector< hash_function_for_vectors > vector_of_hash_function_for_vectors;
 
 // GLOBAL VARS
-const size_t number_of_hash_functions = 100; 
-const size_t number_of_vector_of_hash_function_for_vectors = 100;  
-const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1}; // Trashold values
-vector<string> textos;
 
+vector<string> textos;
 const int debug = 0; // jaccard results without times
 const int debug_time = 1; // only times and similarty values
 const int generation = true; // generations of documents
@@ -237,17 +234,17 @@ void print(const signature_matrix& sm){
  * https://en.wikipedia.org/wiki/Universal_hashing#Hashing_integers
  * p should be prime >= m
  */
-hash_function get_hash_function(const size_t a, const size_t c /* , const size_t p */){
-	return [a,c /* ,p */](size_t x) -> size_t {
-		return (a*x+c)/* %p */;
+hash_function get_hash_function(const size_t a, const size_t c , const size_t p ){
+	return [a,c,p ](size_t x) -> size_t {
+		return (a*x+c) %p ;
 	};
 }
 
-hash_function_for_vectors get_hash_function_for_vectors(const size_t a , const size_t c /* , size_t p */){
-	return [a,c /* ,p */](vector<size_t> x) -> size_t {
+hash_function_for_vectors get_hash_function_for_vectors(const size_t a , const size_t c , size_t p){
+	return [a,c,p ](vector<size_t> x) -> size_t {
 		size_t ret = 0;
 		for (size_t k : x){
-			ret = ( ret * a + c + k ) /* %p */ ;  
+			ret = ( ret * a + c + k ) %p ;  
 			}
 		return ret;
 	};	
@@ -366,20 +363,47 @@ void reading_documents() {
 		textos.push_back(get_text_file(palabra.c_str()));
 	}
   }
+/*
+ * http://primes.utm.edu/prove/prove2_3.html 
+ */
+size_t get_prime(const size_t lower_bound){
+	function<size_t(size_t,size_t,size_t)> pow = [&pow](size_t a, size_t b, size_t c)->size_t {
+		if (b == 0) {return 1;}
+		size_t res = pow(a,b/2,c);
+		size_t res2 = res*res % c;
+		if (b % 2 == 0){
+			return res2;
+			}
+		return res2*a%c; };
+	const vector<size_t> list = {2, 3, 5, 7, 11, 13, 17};
+	auto atomic_test = [](size_t a, size_t n, size_t d, size_t two_to_r)->bool{return true;};//----
+	auto mytest = [&list](size_t a) -> bool {
+		//----
+		for(size_t v : list){
+			//----
+			}
+		return true;
+		};
+	for (size_t u = lower_bound; ; u += 1){
+		if (u%2 == 1 and mytest(u)){
+			return u;
+			}
+		}
+	return 0;}
 
-vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_hash_functions){
+vector_of_hash_functions get_vector_of_hash_functions(const size_t number_of_hash_functions, const size_t lower_bound){
 	vector_of_hash_functions vh = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_hash_functions ; q += 1){
-		vh.push_back(get_hash_function(rand(),rand()));
+		vh.push_back(get_hash_function(rand(),rand(),get_prime(lower_bound)));
 	}
 	return vh;	
 }
-vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(const size_t number_of_vector_of_hash_function_for_vectors){
+vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(const size_t number_of_vector_of_hash_function_for_vectors, const size_t lower_bound){
 	vector_of_hash_function_for_vectors vf = {};
 	srand(time(0));
 	for (size_t q = 0; q < number_of_vector_of_hash_function_for_vectors ; q += 1){
-		vf.push_back(get_hash_function_for_vectors(rand(),rand()));
+		vf.push_back(get_hash_function_for_vectors(rand(),rand(),get_prime(lower_bound)));
 	}
 	return vf;	
 }
@@ -388,21 +412,24 @@ vector_of_hash_function_for_vectors get_vector_of_hash_function_for_vectors(cons
 
 int main(void) {
 	clock_t time_start, time_end;
-    
+    const size_t number_of_hash_functions = 100; 
+	const size_t number_of_vector_of_hash_function_for_vectors = 100;  
+	const vector<float>  t_values = {0.1,0.2,0.3,0.4,0.5 ,0.6,0.7,0.8,0.9,1}; // Threshold values
 	//Reading Documents
      if (generation) {generating_docs();}
      reading_documents();
 	
 	//ahora creamos las funciones de hash aleatorias que simularan las permutaciones
+	const size_t lower_bound = 1299827; //https://primes.utm.edu/lists/small/100000.txt
 	clock_t start_vector_of_hash_functions = clock();
-	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions);
+	vector_of_hash_functions vh = get_vector_of_hash_functions(number_of_hash_functions, lower_bound);
 	clock_t end_vector_of_hash_functions = clock();
 	if (debug_time){cout << "time to compute vector_of_hash_functions "  << ((double)(end_vector_of_hash_functions - start_vector_of_hash_functions))/CLOCKS_PER_SEC << endl;}
 	
 	
 	//ahora creamos las funciones que hashearan las bandas del LSH
 	clock_t start_vector_of_hash_function_for_vectors = clock();
-	vector_of_hash_function_for_vectors vf = get_vector_of_hash_function_for_vectors(number_of_vector_of_hash_function_for_vectors);
+	vector_of_hash_function_for_vectors vf = get_vector_of_hash_function_for_vectors(number_of_vector_of_hash_function_for_vectors, lower_bound);
 	clock_t end_vector_of_hash_function_for_vectors = clock();
 	if (debug_time){cout << "time to compute start_vector_of_hash_function_for_vectors "  << ((double)(end_vector_of_hash_function_for_vectors - start_vector_of_hash_function_for_vectors))/CLOCKS_PER_SEC << endl;}
     
