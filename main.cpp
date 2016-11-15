@@ -441,11 +441,12 @@ int main(void) {
 		time_start = clock();
 		signature_matrix sm = compute_signature_matrix(cks, vh);
 		time_end = clock();
-		if(debug_time) cout << "csm	" << k << 0 << "	" << 0 << "	" << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
+		if(debug_time) cout << "csm	" << k << "	" << 0 << "	" << 0 << "	" << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
 		
 		//if(debug) cout << "Para la k " << k << " la media cuadrada de los errores es: " << test(cks, sm) << endl;
 		//fin de los calculos que solo dependen de k y number_of_hash_functions
 		const bool experimento_lsh = true;
+		float avgtime_jacsim_sm, avgtime_jacsim_cks;
 		if (experimento_lsh){		
 		for (float t : t_values) {
 			for (size_t r = 1; r < 7; ++r) {
@@ -460,18 +461,20 @@ int main(void) {
 					time_start = clock();
 					const double js_sm = jaccard_similarity(kp.first, kp.second, sm);
 					time_end = clock();
+					avgtime_jacsim_sm += ((float)(time_end - time_start)/CLOCKS_PER_SEC);
 					if(debug_time) cout << "jacsim_sm	" << k << "	" << r << "	"  << t << "	" << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
 					time_start = clock();
 					const double js = jaccard_similarity(cks.at(kp.first), cks.at(kp.second));
 					time_end = clock();
-					if(debug_time) cout << "jacsim_cks	" << k << "	" << r << "	"  << t << "	" << ((float)(time_end - time_start)/CLOCKS_PER_SEC) << endl;
+					avgtime_jacsim_cks += ((float)(time_end - time_start)/CLOCKS_PER_SEC);
 					if(debug) cout << " jaccard sm " <<  js_sm;
 					if(debug) cout << " jaccard directo " << js;
 					if(debug) cout << " error relativo " << absolute((js-js_sm)/(js +  0.000001));
 					if(debug) cout << endl;
 				}
-				time_end = clock();
-				if(debug) cout << "total elapsed " << ((float)(time_end - time_start))/CLOCKS_PER_SEC << " seconds" << endl;
+				if(debug_time) cout << "jacsim_sm	" << k << "	" << r << "	"  << t << "	" << avgtime_jacsim_sm / pairconcidence.size() << endl;
+				if(debug_time) cout << "jacsim_cks	" << k << "	" << r << "	"  << t << "	" << avgtime_jacsim_cks / pairconcidence.size()<< endl;
+
 			  }
 		   }
 		}
